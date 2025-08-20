@@ -1,0 +1,41 @@
+---
+import Service from "../components/Service.astro";
+---
+
+<div class="p-5 lg:p-8 rounded-lg mt-20 text-center bg-white">
+    <h2 class="!text-blue-company-600">Nuestros Servicios</h2>
+    <p class="text-center !text-black text-lg mb-15 lg:w-3/4 lg:mx-auto">
+        Si aún no tienes presencia en Internet o ya la tienes pero deseas
+        exponenciar su alcance, nuestros servicios al ser totalmente
+        personalizados para cada cliente y proyecto te van ayudar sin duda a
+        alcanzar cada uno de los objetivos de tu proyecto.
+    </p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <Service title="Diseño y Desarrollo Web" link="/paginas-web-cancun">
+            <p>
+                Impulsa tu negocio con nuestro servicio de <b
+                    >Diseño de Páginas Web en Cancún</b
+                >: desarrollamos sitios modernos, rápidos y enfocados en atraer
+                y convertir clientes desde el primer clic.
+            </p>
+        </Service>
+        <Service title="Desarrollo de Software" link="/software-a-medida">
+            <p>
+                Potencia tu empresa con soluciones a la medida. Nuestro servicio
+                de <b>Desarrollo de Software</b> crea sistemas ágiles, escalables
+                y adaptados a tus procesos para maximizar eficiencia y crecimiento.
+            </p>
+        </Service>
+        <Service
+            title="Posicionamiento SEO & SEM"
+            link="/posicionamiento-seo-sem"
+        >
+            <p>
+                Aumenta tu visibilidad y genera más clientes. Con nuestro
+                <b>servicio de SEO & SEM</b> posicionaremos tu negocio en los primeros
+                lugares de búsqueda y crearemos campañas que convierten.
+            </p>
+        </Service>
+    </div>
+</div>

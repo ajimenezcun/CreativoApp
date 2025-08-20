@@ -1,0 +1,54 @@
+---
+interface Props {
+    question: string;
+    answer: string;
+    visible: boolean;
+}
+
+const { question, answer, visible = false } = Astro.props;
+---
+
+<article class="bg-white p-5 rounded-lg mt-10">
+    <div
+        class="flex items-center justify-between cursor-pointer faq-item-event"
+    >
+        <h3 class="!text-blue-company-500 !m-0">
+            {question}
+        </h3>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            ><path
+                fill="none"
+                stroke="#1E94FF"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M18 12h-6m0 0H6m6 0V6m0 6v6"></path></svg
+        >
+    </div>
+    <p class:list={["text-black", "mt-5", { hidden: !visible }]}>
+        {answer}
+    </p>
+</article>
+
+<!-- Agrega listener para mostrar/ocultar respuesta -->
+<script>
+    const faqItems = document.querySelectorAll(".faq-item-event");
+    faqItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            const answer = item.nextElementSibling;
+
+            // Ocultar todas las respuestas
+            faqItems.forEach((el) => {
+                const elAnswer = el.nextElementSibling;
+                elAnswer?.classList.add("hidden");
+            });
+
+            // Mostrar la respuesta del item actual
+            answer?.classList.toggle("hidden");
+        });
+    });
+</script>

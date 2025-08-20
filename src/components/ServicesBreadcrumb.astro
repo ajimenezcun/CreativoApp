@@ -1,0 +1,47 @@
+---
+export interface BreadcrumbProps {
+    current: string;
+}
+
+const { current } = Astro.props;
+---
+
+<div
+    class="flex flex-col gap-2 text-white text-sm mb-10 lg:flex-row lg:items-center"
+>
+    <a href="/" class="font-semibold text-blue-company-600">Creativo APP</a>
+    <span>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            ><path
+                fill="none"
+                stroke="#ffffff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m12 19l7-7l-7-7m7 7H5"></path></svg
+        >
+    </span>
+    <a href="/servicios" class="font-semibold text-blue-company-400"
+        >Servicios</a
+    >
+    <span>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            ><path
+                fill="none"
+                stroke="#ffffff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m12 19l7-7l-7-7m7 7H5"></path></svg
+        >
+    </span>
+    <span>{current}</span>
+</div>

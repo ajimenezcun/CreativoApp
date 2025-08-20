@@ -1,0 +1,367 @@
+---
+interface Props {
+  items: Array<{
+    id: string;
+    title: string;
+    description: string;
+    image?: string;
+    link?: string;
+  }>;
+  autoSlideInterval?: number; // en milisegundos
+  showItems?: number; // cantidad de items a mostrar
+  showIndicators?: boolean; // mostrar bullets/indicadores
+}
+
+const {
+  items,
+  autoSlideInterval = 5000,
+  showItems = 2,
+  showIndicators = true,
+} = Astro.props;
+
+// Generar ID único para este carousel
+const carouselId = `carousel-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<div class="slide-carousel" id={carouselId}>
+  <div class="carousel-container">
+    <!-- Contenedor de slides -->
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        {
+          items.map((item, index) => (
+            <div class="carousel-slide" key={item.id}>
+              {item.image && (
+                <div class="slide-image">
+                  <img src={item.image} alt={item.title} loading="lazy" />
+                </div>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Controles en la parte inferior -->
+  <div class="carousel-controls">
+    <!-- Indicadores (si están habilitados) -->
+    {
+      showIndicators && (
+        <div class="carousel-indicators">
+          {Array.from({ length: Math.ceil(items.length / showItems) }).map(
+            (_, index) => (
+              <button
+                class={`indicator ${index === 0 ? "active" : ""}`}
+                data-slide={index}
+                aria-label={`Ir a grupo ${index + 1}`}
+              />
+            ),
+          )}
+        </div>
+      )
+    }
+
+    <!-- Botones de navegación -->
+    <div class="carousel-buttons">
+      <button
+        class="carousel-btn carousel-btn-prev bg-blue-company-800 w-[48px] h-[48px] p-5 rounded-md cursor-pointer"
+        aria-label="Anterior"
+      >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          class="!-mt-[10px] !-ml-[10px]"
+        >
+          <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+      </button>
+      <button
+        class="carousel-btn carousel-btn-next bg-blue-company-800 w-[48px] h-[48px] p-5 rounded-md cursor-pointer"
+        aria-label="Siguiente"
+      >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          class="!-mt-[10px] !-ml-[10px]"
+        >
+          <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style
+  define:vars={{
+    showItems: showItems.toString(),
+    autoInterval: `${autoSlideInterval}ms`,
+  }}
+>
+  .slide-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .carousel-slide {
+    flex: 0 0 calc(50% - 10px); /* w-1/2 con gap considerado */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .carousel-slide:hover .slide-image img {
+    transform: scale(1.05);
+  }
+
+  .slide-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .slide-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .slide-description {
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+  }
+
+  .slide-link {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    align-self: flex-start;
+  }
+
+  .slide-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+  }
+
+  /* Controles en la parte inferior */
+  .carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+
+  .carousel-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+    padding-right: 10px;
+  }
+
+  .carousel-btn:active {
+    transform: scale(0.95);
+  }
+
+  .carousel-indicators {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #d1d5db;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .indicator.active,
+  .indicator:hover {
+    background: #3b82f6;
+    transform: scale(1.2);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .carousel-track {
+      gap: 15px;
+      padding: 0 8px;
+    }
+
+    .carousel-slide {
+      flex: 0 0 calc(100% - 7.5px);
+      min-height: 250px;
+    }
+
+    /* .carousel-btn {
+      width: 36px;
+      height: 36px;
+    } */
+
+    .carousel-controls {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .carousel-buttons {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .carousel-track {
+      gap: 10px;
+      padding: 0 5px;
+    }
+
+    .carousel-slide {
+      padding: 1rem;
+      flex: 0 0 calc(100% - 5px);
+    }
+  }
+</style>
+
+<script define:vars={{ carouselId, autoSlideInterval, showItems }}>
+  document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById(carouselId);
+    if (!carousel) return;
+
+    const track = carousel.querySelector(".carousel-track");
+    const prevBtn = carousel.querySelector(".carousel-btn-prev");
+    const nextBtn = carousel.querySelector(".carousel-btn-next");
+    const indicators = carousel.querySelectorAll(".indicator");
+    const slides = carousel.querySelectorAll(".carousel-slide");
+
+    let currentIndex = 0;
+    let autoSlideTimer = null;
+    const totalSlides = slides.length;
+    const maxIndex = Math.ceil(totalSlides / showItems) - 1;
+
+    function updateCarousel() {
+      const translateX = -(
+        currentIndex *
+        (100 + 20 / (carousel.offsetWidth / 2))
+      ); // Considerando el gap
+      track.style.transform = `translateX(${translateX}%)`;
+
+      // Actualizar indicadores solo si existen
+      if (indicators.length > 0) {
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle("active", index === currentIndex);
+        });
+      }
+    }
+
+    function nextSlide() {
+      currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+      updateCarousel();
+    }
+
+    function goToSlide(index) {
+      currentIndex = Math.max(0, Math.min(index, maxIndex));
+      updateCarousel();
+    }
+
+    function startAutoSlide() {
+      stopAutoSlide();
+      autoSlideTimer = setInterval(nextSlide, autoSlideInterval);
+    }
+
+    function stopAutoSlide() {
+      if (autoSlideTimer) {
+        clearInterval(autoSlideTimer);
+        autoSlideTimer = null;
+      }
+    }
+
+    // Event listeners
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      startAutoSlide(); // reiniciar timer
+    });
+
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      startAutoSlide(); // reiniciar timer
+    });
+
+    // Event listeners para indicadores (solo si existen)
+    if (indicators.length > 0) {
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener("click", () => {
+          goToSlide(index);
+          startAutoSlide(); // reiniciar timer
+        });
+      });
+    }
+
+    // Pausar en hover
+    carousel.addEventListener("mouseenter", stopAutoSlide);
+    carousel.addEventListener("mouseleave", startAutoSlide);
+
+    // Iniciar auto-slide
+    startAutoSlide();
+  });
+</script>

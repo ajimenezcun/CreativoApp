@@ -1,0 +1,139 @@
+<header>
+    <div class="company-logo">
+        <a href="/">
+            <img
+                src="/src/assets/creativo-app-company.png"
+                alt="CreativoAPP Logo"
+            />
+        </a>
+        <button
+            id="mobileMenuTrigger"
+            type="button"
+            class="lg:hidden p-3"
+            aria-controls="mobileNav"
+            aria-expanded="false"
+            aria-label="Abrir menú de navegación"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                viewBox="0 0 16 16"
+            >
+                <path
+                    fill="#ffffff"
+                    d="M2 3.75A.75.75 0 0 1 2.75 3h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75m0 4A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75m0 4a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75"
+                ></path>
+            </svg>
+        </button>
+    </div>
+    <div id="mobileBackdrop" class="lg:hidden"></div>
+    <nav id="mobileNav" aria-hidden="true">
+        <ul>
+            <li>
+                <a href="/">INICIO</a>
+            </li>
+            <li>
+                <a href="/servicios">Servicios</a>
+            </li>
+            <li class="lg:hidden">
+                <ul class="!mt-0 !ml-2">
+                    <li>
+                        <a
+                            href="/paginas-web-cancun"
+                            class="!text-blue-company-500 !text-base"
+                            >Diseño & Desarrollo Web</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/desarrollo-software"
+                            class="!text-blue-company-500 !text-base"
+                            >Software a la medida</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/posicionamiento-seo-sem"
+                            class="!text-blue-company-500 !text-base"
+                            >Poscionamiento SEO & SEM</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/consultoria-digital"
+                            class="!text-blue-company-500 !text-base"
+                            >Consultoría Digital</a
+                        >
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/portfolio">Proyectos</a>
+            </li>
+            <li>
+                <a href="/contacto">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="quote-button">
+        <a
+            href="/cotizar"
+            class="border border-white rounded-3xl px-5 py-2 font-semibold transition-all duration-300 hover:bg-white hover:text-blue-company-500"
+            >Cotiza tu Proyecto</a
+        >
+    </div>
+</header>
+
+<script>
+    (function () {
+        const btn = document.getElementById("mobileMenuTrigger");
+        const nav = document.getElementById("mobileNav");
+        const backdrop = document.getElementById("mobileBackdrop");
+
+        if (!btn || !nav || !backdrop) return;
+
+        const openMenu = () => {
+            nav.classList.add("is-open");
+            backdrop.classList.add("is-active");
+            document.body.classList.add("menu-open");
+            btn.setAttribute("aria-expanded", "true");
+            nav.setAttribute("aria-hidden", "false");
+        };
+
+        const closeMenu = () => {
+            nav.classList.remove("is-open");
+            backdrop.classList.remove("is-active");
+            document.body.classList.remove("menu-open");
+            btn.setAttribute("aria-expanded", "false");
+            nav.setAttribute("aria-hidden", "true");
+        };
+
+        btn.addEventListener("click", () => {
+            const expanded = btn.getAttribute("aria-expanded") === "true";
+            expanded ? closeMenu() : openMenu();
+        });
+
+        // Clic fuera (overlay)
+        backdrop.addEventListener("click", closeMenu);
+
+        // Cerrar al navegar por un link del menú
+        nav.addEventListener("click", (e) => {
+            if (e.target.closest("a")) closeMenu();
+        });
+
+        // Cerrar con Escape
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeMenu();
+        });
+
+        // Si cambia a desktop, asegúrate de cerrar el panel
+        const lgQuery = window.matchMedia("(min-width: 1024px)");
+        const handleResize = () => {
+            if (lgQuery.matches) closeMenu();
+        };
+        lgQuery.addEventListener
+            ? lgQuery.addEventListener("change", handleResize)
+            : lgQuery.addListener(handleResize); // fallback safari viejo
+    })();
+</script>

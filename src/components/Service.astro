@@ -1,0 +1,21 @@
+---
+export interface ServiceProps {
+    title: string;
+    link: string;
+}
+
+const { title, link } = Astro.props;
+---
+
+<!-- <article
+    class="rounded-xl p-5 text-white transition-all duration-300 hover:bg-gray-800"
+> -->
+<article class="rounded-lg p-5 bg-gray-100 text-black">
+    <h3 class="!text-black !p-0 !m-0 !mb-5">{title}</h3>
+    <slot />
+    <a
+        href={link}
+        class="primary-cta block w-fit mx-auto mt-5 !px-5 hover:scale-105"
+        >Saber más</a
+    >
+</article>

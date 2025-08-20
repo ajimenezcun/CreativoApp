@@ -1,0 +1,193 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Services from "../components/ServicesSection.astro";
+import Presencia from "../components/Presencia.astro";
+import LogoCarousel from "../components/LogoCarousel.astro";
+import SlideCarrousel from "../components/SlideCarrousel.astro";
+
+const logos = [
+	"/src/assets/pioneros-cancun-marca.webp",
+	"/src/assets/yachtsadventures-logo-light.webp",
+	"/src/assets/caribbean-paradise-vacations-marca.webp",
+	"/src/assets/digrama-marca.webp",
+	"/src/assets/yachting-in-cancun-marca.webp",
+	"/src/assets/fantastic-travel-marca.webp",
+	"/src/assets/tulum-siankaan-tours-marca.webp",
+	"/src/assets/mayikal-experiences-marca.webp",
+];
+
+const items = [
+	{
+		id: "1",
+		title: "Pioneros Cancún Asociación",
+		image: "/src/assets/pioneros-asosiacion-portfolio.webp",
+	},
+	{
+		id: "2",
+		title: "Caribbean Paradise Vacations",
+		image: "/src/assets/caribbean-paradise-portfolio.webp",
+	},
+	{
+		id: "3",
+		title: "Yachts Adventures",
+		image: "/src/assets/yacht-adventure-portfolio.webp",
+	},
+	{
+		id: "4",
+		title: "Mayikal Experiences",
+		image: "/src/assets/mayikal-experiences-portfolio.webp",
+	},
+	{
+		id: "5",
+		title: "JP Contadores",
+		image: "/src/assets/jp-contadores-portfolio.webp",
+	},
+	{
+		id: "6",
+		title: "Fantastic Travel",
+		image: "/src/assets/fantastic-travel-portfolio.webp",
+	},
+];
+---
+
+<Layout
+	title="Agencia de Desarrollo Web y Software en Cancún | SEO y Consultoría Digital"
+	description="Desarrollamos páginas web, software a la medida y estrategias SEO/SEM que posicionan tu negocio. Solicita tu cotización sin compromiso."
+>
+	<section class="section">
+		<h1 class="block !mb-10 !mt-10 lg:!mt-30 lg:w-3/4">
+			Diseño y Desarrollo de Soluciones para la Web en Cancun
+		</h1>
+		<p class="text-xl mx-auto mb-8 leading-8">
+			Diseñamos y desarrollamos soluciones innovadoras que se ajustan
+			perfectamente a tus necesidades. Nuestro enfoque personalizado y
+			nuestra experiencia en tecnología garantizan resultados que superan
+			tus expectativas. Confía en nosotros para llevar tu presencia
+			digital al siguiente nivel con servicios a la medida.
+		</p>
+
+		<img
+			src="/src/assets/abstract-lines.svg"
+			class="absolute -z-10 right-0 top-30"
+		/>
+
+		<Services />
+
+		<div class="mt-20">
+			<h2 class="text-center">Nuestros Proyectos</h2>
+			<p class="text-center mx-auto mb-10 w-11/12">
+				Estos son tan solo algunos de los proyectos que hemos realizado
+				para nuestros clientes, si estas buscando materializar o mejorar
+				tu presencia en internet ven y unete a nuestra lista de
+				proyectos exitosos.
+			</p>
+
+			<LogoCarousel logos={logos} />
+
+			<SlideCarrousel items={items} showIndicators={false} />
+		</div>
+
+		<div class="mt-20 mb-20 p-5 lg:p-10 bg-white rounded-lg">
+			<div
+				class="grid grid-cols-1 lg:grid-cols-3 lg:gap-8 lg:items-end mb-8"
+			>
+				<article class="col-span-2">
+					<h2 class="!mt-0 !text-blue-company-600">
+						¿Por qué elegir Creativo APP?
+					</h2>
+					<p class="text-black text-xl mb-10 lg:mb-5">
+						Si estas buscando tener o mejorar tu presencia en
+						internet necesitas una empresa que te brinde soluciones
+						innovadoras y personalizadas, en Creativo APP somos
+						expertos. Nuestra experiencia en tecnología nos permite
+						ofrecer servicios que superan las expectativas y ayudan
+						a alcanzar los objetivos de cada proyecto.
+					</p>
+				</article>
+				<div class="lg:col-span-1">
+					<div class="bg-gray-100 p-5 rounded-lg">
+						<Presencia
+							title="Enfoque Personalizado"
+							content="Cada proyecto es único. Adaptamos nuestras soluciones a las necesidades específicas de tu proyecto, garantizando que recibas un servicio hecho a medida que maximice tus resultados."
+						>
+							<svg
+								slot="icon"
+								class="text-blue-company-600 w-8 h-8 block mb-3"
+								xmlns="http://www.w3.org/2000/svg"
+								width="64"
+								height="64"
+								viewBox="0 0 15 15"
+								><path
+									fill="none"
+									stroke="currentColor"
+									d="M2.5 7.5H0m15 5h-2.5m2.5-10H8.5m-2 0H0m4.5 5H15m-4.5 5H0m10.5-2v4h2v-4zm-8-5v4h2v-4zm4-5v4h2v-4z"
+								></path></svg
+							>
+						</Presencia>
+					</div>
+				</div>
+			</div>
+			<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+				<div class="bg-gray-100 p-5 rounded-lg col-span-1">
+					<Presencia
+						title="Priorización de Tiempos"
+						content="Entendemos que el tiempo es valioso. Nos comprometemos a cumplir con los plazos acordados, asegurando que tu proyecto avance de manera eficiente y sin demoras innecesarias."
+					>
+						<svg
+							slot="icon"
+							class="text-blue-company-600 w-8 h-8 block mb-3"
+							xmlns="http://www.w3.org/2000/svg"
+							width="64"
+							height="64"
+							viewBox="0 0 24 24"
+							><path
+								fill="#2196f3"
+								d="M11 8h2v6h-2zm4-7H9v2h6zm-3 19c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7c.7 0 1.36.13 2 .35V13c0-2.12-.74-4.07-1.97-5.61l1.42-1.42c-.45-.51-.9-.97-1.41-1.41L17.62 6c-1.55-1.26-3.5-2-5.62-2a9 9 0 0 0 0 18c.59 0 1.16-.06 1.71-.17c-.31-.58-.53-1.23-.63-1.92c-.36.05-.71.09-1.08.09m11-2.11l-2.89-.25L19 15l-1.13 2.64l-2.87.25l2.18 1.88l-.68 2.81l2.5-1.49l2.45 1.49l-.65-2.81z"
+							></path></svg
+						>
+					</Presencia>
+				</div>
+				<div class="bg-gray-100 p-5 rounded-lg col-span-1">
+					<Presencia
+						title="Soluciones Escalables"
+						content="Nuestras soluciones están diseñadas para crecer contigo. Ofrecemos sistemas y sitios web escalables que pueden expandirse y adaptarse fácilmente a medida que tu negocio evoluciona."
+					>
+						<svg
+							slot="icon"
+							class="text-blue-company-600 w-8 h-8 block mb-3"
+							xmlns="http://www.w3.org/2000/svg"
+							width="64"
+							height="64"
+							viewBox="0 0 24 24"
+							><path
+								fill="#2196f3"
+								d="M1 12V7h1.5v2.45l2.975-2.975l1.05 1.05L3.55 10.5H6V12zm6.525-5.475l-1.05-1.05L9.45 2.5H7V1h5v5h-1.5V3.55zM14.825 23q-.6 0-1.15-.225t-.975-.65L7.6 17l.75-.775q.4-.4.938-.537t1.062.012l1.65.475V8q0-.425.288-.712T13 7t.713.288T14 8v10.825l-2.425-.675l2.55 2.55q.125.125.313.213t.387.087H19q.825 0 1.413-.587T21 19v-4q0-.425.288-.712T22 14t.713.288T23 15v4q0 1.65-1.175 2.825T19 23zM15 16v-4q0-.425.288-.712T16 11t.713.288T17 12v4zm3 0v-3q0-.425.288-.712T19 12t.713.288T20 13v3zm-.5 2"
+							></path></svg
+						>
+					</Presencia>
+				</div>
+				<div class="bg-gray-100 p-5 rounded-lg col-span-1">
+					<Presencia
+						title="Soporte Continuo"
+						content="Nuestra relación no termina con la entrega del proyecto. Ofrecemos soporte y mantenimiento continuo para asegurarnos de que todo funcione perfectamente y para realizar mejoras cuando sea necesario."
+					>
+						<svg
+							slot="icon"
+							class="text-blue-company-600 w-8 h-8 block mb-3"
+							xmlns="http://www.w3.org/2000/svg"
+							width="64"
+							height="64"
+							viewBox="0 0 16 16"
+							><path
+								fill="none"
+								stroke="#2196f3"
+								stroke-linejoin="round"
+								d="M14.5 12.5h-2v-4h2zm0 0c.667-3.667.3-11-6.5-11s-7.167 7.333-6.5 11m0 0h2v-4h-2zm7 2c1.31.11 3.476-.268 4.816-2m-4.816 2v-1h-1v1z"
+							></path></svg
+						>
+					</Presencia>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
