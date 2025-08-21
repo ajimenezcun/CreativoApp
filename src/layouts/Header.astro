@@ -1,15 +1,26 @@
+<script>
+    import { gsap } from "gsap";
+    gsap.from(".head-item", { opacity: 0, y: -20, duration: 1, stagger: 0.15 });
+    gsap.from(".h1", {
+        opacity: 0,
+        x: -100,
+        duration: 1.5,
+        ease: "power4.inOut",
+    });
+</script>
 <header>
     <div class="company-logo">
         <a href="/">
             <img
                 src="/src/assets/creativo-app-company.png"
                 alt="CreativoAPP Logo"
+                class="head-item"
             />
         </a>
         <button
             id="mobileMenuTrigger"
             type="button"
-            class="lg:hidden p-3"
+            class="lg:hidden head-item p-3"
             aria-controls="mobileNav"
             aria-expanded="false"
             aria-label="Abrir menú de navegación"
@@ -30,10 +41,10 @@
     <div id="mobileBackdrop" class="lg:hidden"></div>
     <nav id="mobileNav" aria-hidden="true">
         <ul>
-            <li>
+            <li class="head-item">
                 <a href="/">INICIO</a>
             </li>
-            <li>
+            <li class="head-item">
                 <a href="/servicios">Servicios</a>
             </li>
             <li class="lg:hidden">
@@ -68,15 +79,15 @@
                     </li>
                 </ul>
             </li>
-            <li>
+            <li class="head-item">
                 <a href="/portfolio">Proyectos</a>
             </li>
-            <li>
+            <li class="head-item">
                 <a href="/contacto">Contacto</a>
             </li>
         </ul>
     </nav>
-    <div class="quote-button">
+    <div class="quote-button head-item">
         <a
             href="/cotizar"
             class="border border-white rounded-3xl px-5 py-2 font-semibold transition-all duration-300 hover:bg-white hover:text-blue-company-500"
