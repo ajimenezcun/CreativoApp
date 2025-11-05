@@ -1,11 +1,24 @@
 <script>
     import { gsap } from "gsap";
+    import { SplitText } from "gsap/SplitText";
     gsap.from(".head-item", { opacity: 0, y: -20, duration: 1, stagger: 0.15 });
-    gsap.from(".h1", {
+    // gsap.from(".h1", {
+    //     opacity: 0,
+    //     x: -100,
+    //     duration: 1.5,
+    //     ease: "power4.inOut",
+    // });
+
+    gsap.registerPlugin(SplitText);
+    // split elements with the class "split" into words and characters
+    let split = SplitText.create(".h11", { type: "words, chars" });
+
+    // now animate the characters in a staggered fashion
+    gsap.from(split.chars, {
+        duration: 1,
+        x: -100, // animate from 100px below
+        stagger: 0.05, // 0.05 seconds between each
         opacity: 0,
-        x: -100,
-        duration: 1.5,
-        ease: "power4.inOut",
     });
 </script>
 <header>
@@ -80,7 +93,7 @@
                 </ul>
             </li>
             <li class="head-item">
-                <a href="/portfolio">Proyectos</a>
+                <a href="/proyectos">Proyectos</a>
             </li>
             <li class="head-item">
                 <a href="/contacto">Contacto</a>
@@ -89,7 +102,7 @@
     </nav>
     <div class="quote-button head-item">
         <a
-            href="/cotizar"
+            href="/cotizar-proyecto"
             class="border border-white rounded-3xl px-5 py-2 font-semibold transition-all duration-300 hover:bg-white hover:text-blue-company-500"
             >Cotiza tu Proyecto</a
         >

@@ -51,20 +51,27 @@ const items = [
 ---
 
 <Layout
-	title="Agencia de Desarrollo Web y Software en Cancún | SEO y Consultoría Digital"
-	description="Desarrollamos páginas web, software a la medida y estrategias SEO/SEM que posicionan tu negocio. Solicita tu cotización sin compromiso."
+	title="Agencia de Desarrollo Web en Cancún y Desarrollo de Software a la Medida"
+	description="Creamos soluciones digitales a la medida: Software, CRMs y Aplicaciones Web. Somos tu agencia de desarrollo de software y web en Cancún. ¡Cotiza tu proyecto!"
 >
 	<section class="section">
 		<h1 class="block !mb-10 !mt-10 h1 lg:!mt-30 lg:w-3/4">
-			Diseño y Desarrollo de Soluciones para la Web en Cancun
+			Soluciones de Software y Desarrollo Web a Medida en Cancún
 		</h1>
 		<p class="text-xl mx-auto mb-8 leading-8">
-			Diseñamos y desarrollamos soluciones innovadoras que se ajustan
-			perfectamente a tus necesidades. Nuestro enfoque personalizado y
-			nuestra experiencia en tecnología garantizan resultados que superan
-			tus expectativas. Confía en nosotros para llevar tu presencia
-			digital al siguiente nivel con servicios a la medida.
+			En <b>Creativo APP</b>, transformamos desafíos operativos en
+			ventajas competitivas. Somos la <b
+				>Agencia de Desarrollo Web en Cancún</b
+			>
+			y el equipo experto en <b>Desarrollo de Software a Medida</b> que tu
+			negocio necesita para escalar. Desde sitios web optimizados hasta plataformas
+			empresariales complejas, diseñamos y codificamos soluciones que trabajan
+			para ti.
 		</p>
+
+		<a href="/cotizar-proyecto" class="primary-cta text-lg !px-7 !py-3"
+			>Cotiza tu Proyecto</a
+		>
 
 		<img
 			src="/src/assets/abstract-lines.svg"
@@ -74,12 +81,14 @@ const items = [
 		<Services />
 
 		<div class="mt-20">
-			<h2 class="text-center">Nuestros Proyectos</h2>
+			<h2 class="text-center !mb-0">Casos de Éxito</h2>
+			<h3 class="text-center !text-2xl !mt-0">Nuestros Proyectos</h3>
 			<p class="text-center mx-auto mb-10 w-11/12">
-				Estos son tan solo algunos de los proyectos que hemos realizado
-				para nuestros clientes, si estas buscando materializar o mejorar
-				tu presencia en internet ven y unete a nuestra lista de
-				proyectos exitosos.
+				Nuestros proyectos hablan por sí mismos. Hemos colaborado en
+				proyectos de diferentes ambientes y sectores, ayudando a
+				empresas de Turismo, Construcción, y Restaurantes brindándoles
+				<b>Desarrollo de Software a Medida</b> y las <b>Páginas Web</b> que
+				necesitaban.
 			</p>
 
 			<LogoCarousel logos={logos} />
@@ -88,51 +97,24 @@ const items = [
 		</div>
 
 		<div class="mt-20 mb-20 p-5 lg:p-10 bg-white rounded-lg">
-			<div
-				class="grid grid-cols-1 lg:grid-cols-3 lg:gap-8 lg:items-end mb-8"
-			>
-				<article class="col-span-2">
-					<h2 class="!mt-0 !text-blue-company-600">
-						¿Por qué elegir Creativo APP?
-					</h2>
-					<p class="text-black text-xl mb-10 lg:mb-5">
-						Si estas buscando tener o mejorar tu presencia en
-						internet necesitas una empresa que te brinde soluciones
-						innovadoras y personalizadas, en Creativo APP somos
-						expertos. Nuestra experiencia en tecnología nos permite
-						ofrecer servicios que superan las expectativas y ayudan
-						a alcanzar los objetivos de cada proyecto.
-					</p>
-				</article>
-				<div class="lg:col-span-1">
-					<div class="bg-gray-100 p-5 rounded-lg">
-						<Presencia
-							title="Enfoque Personalizado"
-							content="Cada proyecto es único. Adaptamos nuestras soluciones a las necesidades específicas de tu proyecto, garantizando que recibas un servicio hecho a medida que maximice tus resultados."
-						>
-							<svg
-								slot="icon"
-								class="text-blue-company-600 w-8 h-8 block mb-3"
-								xmlns="http://www.w3.org/2000/svg"
-								width="64"
-								height="64"
-								viewBox="0 0 15 15"
-							>
-								<path
-									fill="none"
-									stroke="currentColor"
-									d="M2.5 7.5H0m15 5h-2.5m2.5-10H8.5m-2 0H0m4.5 5H15m-4.5 5H0m10.5-2v4h2v-4zm-8-5v4h2v-4zm4-5v4h2v-4z"
-								></path>
-							</svg>
-						</Presencia>
-					</div>
-				</div>
-			</div>
+			<article class="text-center mb-10 lg:mb-20">
+				<h2 class="!mt-0 !text-blue-company-600">
+					¿Por qué elegir un desarrollo hecho a la medida?
+				</h2>
+				<p class="text-black text-xl mb-10 lg:mb-5">
+					El software genérico no está diseñado para tu modelo de
+					negocio único. Nuestro servicio de <b
+						>Desarrollo de Software a Medida</b
+					> garantiza que cada aplicación, sistema o plataforma se ajuste
+					perfectamente a tus procesos internos, eliminando ineficiencias
+					y potenciando la productividad.
+				</p>
+			</article>
 			<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
 				<div class="bg-gray-100 p-5 rounded-lg col-span-1">
 					<Presencia
-						title="Priorización de Tiempos"
-						content="Entendemos que el tiempo es valioso. Nos comprometemos a cumplir con los plazos acordados, asegurando que tu proyecto avance de manera eficiente y sin demoras innecesarias."
+						title="Control Total"
+						content="Al desarrollar software a la medida, tienes control total sobre las funcionalidades, el diseño y la escalabilidad del sistema. Esto te permite adaptar y evolucionar la solución según las necesidades cambiantes de tu negocio."
 					>
 						<svg
 							slot="icon"
@@ -151,7 +133,7 @@ const items = [
 				</div>
 				<div class="bg-gray-100 p-5 rounded-lg col-span-1">
 					<Presencia
-						title="Soluciones Escalables"
+						title="Escalabilidad"
 						content="Nuestras soluciones están diseñadas para crecer contigo. Ofrecemos sistemas y sitios web escalables que pueden expandirse y adaptarse fácilmente a medida que tu negocio evoluciona."
 					>
 						<svg
@@ -191,6 +173,72 @@ const items = [
 						</svg>
 					</Presencia>
 				</div>
+			</div>
+		</div>
+
+		<div class="text-center mb-10">
+			<h4>¿Estás listo para llevar tu negocio al siguiente nivel?</h4>
+			<p class="lg:w-3/4 lg:mx-auto">
+				Contáctanos hoy mismo y descubre cómo nuestras soluciones de
+				desarrollo de software a medida y desarrollo web profesional
+				pueden transformar tu empresa.
+			</p>
+			<div class="flex gap-10 justify-center mt-10 lg:flex-row flex-col">
+				<a
+					href="/cotizar-proyecto"
+					class="primary-cta text-lg !px-7 !py-3 flex items-center gap-2 justify-center"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						><g
+							fill="none"
+							stroke="#ffffff"
+							stroke-linecap="round"
+							stroke-width="1.5"
+							><path
+								stroke-linejoin="round"
+								d="M14 3v3m5-1l-2 2m4 3h-3"></path><path
+								d="m9.158 5.712l-.402-.906c-.264-.592-.395-.888-.592-1.115a2 2 0 0 0-.928-.603C6.949 3 6.624 3 5.976 3c-.948 0-1.422 0-1.82.182a2.12 2.12 0 0 0-1.061 1.169c-.143.413-.102.838-.02 1.689q1.31 13.575 14.885 14.885c.85.082 1.276.123 1.69-.02a2.12 2.12 0 0 0 1.168-1.06c.182-.399.182-.873.182-1.821c0-.649 0-.973-.088-1.26a2 2 0 0 0-.603-.928c-.227-.197-.523-.328-1.115-.592l-.906-.402c-.642-.285-.962-.428-1.288-.459a2 2 0 0 0-.919.128c-.305.119-.575.343-1.114.793c-.537.447-.805.67-1.133.79a2.16 2.16 0 0 1-.982.101c-.345-.05-.61-.192-1.139-.475c-1.646-.88-2.553-1.787-3.433-3.433c-.283-.53-.424-.794-.475-1.14a2.16 2.16 0 0 1 .1-.98c.12-.329.344-.597.791-1.134c.45-.54.674-.809.793-1.114c.114-.292.158-.607.128-.919c-.031-.325-.174-.646-.459-1.288Z"
+							></path></g
+						></svg
+					>
+					Llámanos</a
+				>
+				<a
+					href="/cotizar-proyecto"
+					class="primary-cta text-lg !px-7 !py-3 flex items-center gap-2 justify-center"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						><path
+							fill="#ffffff"
+							d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.2 8.2 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18s.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01"
+						></path></svg
+					>
+					Chatea con nosotros</a
+				>
+				<a
+					href="/cotizar-proyecto"
+					class="primary-cta text-lg !px-7 !py-3 flex items-center gap-2 justify-center"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						><path
+							fill="#ffffff"
+							d="M13 19c0-.34.04-.67.09-1H4V8l8 5l8-5v5.09c.72.12 1.39.37 2 .72V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h9.09c-.05-.33-.09-.66-.09-1m7-13l-8 5l-8-5zm-2.25 16.16l-2.75-3L16.16 18l1.59 1.59L21.34 16l1.16 1.41z"
+						></path></svg
+					>
+					Escríbenos</a
+				>
 			</div>
 		</div>
 	</section>
