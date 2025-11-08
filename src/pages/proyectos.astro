@@ -1,72 +1,61 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-const projects = [
-    {
-        id: "1",
-        client: "Pioneros Cancún Asociación",
-        description:
-            "Diseño y desarrollo de una aplicación web enfocada en la carga, gestión y visualización de información relevante de la Institución.",
-        image: "/src/assets/pioneros-asosiacion-portfolio.webp",
-        link: "http://asociacionpioneroscancun.com/",
-    },
-    {
-        id: "2",
-        client: "Caribbean Paradise Vacations",
-        description:
-            "Diseño y Desarrollo web a la medida autoadministrable para una agencia de viajes especializada en hoteles.",
-        image: "/src/assets/caribbean-paradise-portfolio.webp",
-        link: "https://caribbeanparadisevacations.com/",
-    },
-    {
-        id: "3",
-        client: "Yachts Adventures",
-        description:
-            "Desarrollo Web a la medida de un e-commerce para la renta de Yates en linea.",
-        image: "/src/assets/yacht-adventure-portfolio.webp",
-        link: "https://yachtsadventures.com/",
-    },
-    {
-        id: "4",
-        client: "Mayikal Experiences",
-        description:
-            "Diseño Web informativo para presentar y dar información detallada acerca de experiencias nativas en Tulum.",
-        image: "/src/assets/mayikal-experiences-portfolio.webp",
-        link: "https://www.mayikalexperiences.com/",
-    },
-    {
-        id: "5",
-        client: "JP Contadores",
-        description:
-            "Pagina web informativa para la presentación de los servicios contables del despacho JP Contadores",
-        image: "/src/assets/jp-contadores-portfolio.webp",
-        link: "https://www.jpcontadorescancun.com/",
-    },
-    {
-        id: "6",
-        client: "Fantastic Travel",
-        description:
-            "E-commerce turístico autoadministrable para la venta de tours en Cancún y la Riviera Maya.",
-        image: "/src/assets/fantastic-travel-portfolio.webp",
-        link: "https://www.fantastic-travel.com.mx/",
-    },
-];
+import projects from "../data/projects.json";
 ---
 
 <Layout
-    title="Proyectos de Desarrollo Web y Software en Cancún | Agencia en de soluciones digitales en Cancún"
-    description="Conoce algunos de los proyectos que hemos desarrollado en Cancún y otras regiones: sitios web, sistemas a la medida y soluciones digitales enfocadas en resultados."
+    title="Proyectos de Desarrollo Web y Software a la medida en Cancún | Casos de Éxito"
+    description="Explora nuestros casos de éxito en desarrollo de software y web. Proyectos funcionales y de calidad que demuestran nuestra experiencia."
 >
-    <section class="section">
-        <h1 class="block h1 !mb-10 lg:!mt-30 lg:w-3/4">Nuestro Proyectos</h1>
-        <p class="text-xl mx-auto mb-8 leading-8">
-            Sería imposible incluir todos nuestros proyectos, pero podrás
-            explorar algunos de los proyectos más destacados que hemos llevado a
-            cabo. Cada uno de ellos refleja nuestro compromiso con la calidad y
-            la innovación.
-        </p>
+    <main>
+        <section class="section">
+            <h1 class="block h1 !mb-10 lg:!mt-30 lg:w-3/4">
+                Nuestro Proyectos
+            </h1>
+            <p class="text-xl mx-auto mb-15 leading-8">
+                En Creativo APP, la calidad y la innovación se demuestran con
+                resultados. Esta sección es una muestra de tan solo algunos de
+                nuestros <b class="text-blue-company-500"
+                    >proyectos de Desarrollo Web y Software a Medida</b
+                >, donde hemos transformado ideas en soluciones digitales
+                eficientes para nuestros clientes en Cancún y México.
+            </p>
 
-        <div class="grid grid-cols-1 mt-20 mb-20 md:grid-cols-2 gap-10">
+            <article class="bg-white rounded-lg p-5 !text-black">
+                <h2 class="!text-black !mt-0">
+                    Nuestro proceso habitual de trabajo
+                </h2>
+                <p class="mb-5">
+                    En Creativo APP, seguimos un proceso estructurado para
+                    garantizar que cada proyecto de desarrollo web y software a
+                    medida se entregue con la máxima calidad y eficiencia
+                    posible. A continuación, describimos nuestro enfoque
+                    habitual de trabajo:
+                </p>
+
+                <div class="cascade-list">
+                    <div>
+                        <b>1. Reunión inicial y Análisis de requisitos</b>
+                    </div>
+                    <div>
+                        <b>2. Planificación y Prototipado</b>
+                    </div>
+                    <div>
+                        <b>3. Diseño y Retroalimentación</b>
+                    </div>
+                    <div>
+                        <b>4. Desarrollo modular y Pruebas</b>
+                    </div>
+                    <div>
+                        <b>5. Monitoreo y Mejora continua</b>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <section class="section">
+        <div class="grid grid-cols-1 mt-5 mb-20 md:grid-cols-2 gap-10">
             {
                 projects.map((project) => (
                     <div

@@ -25,6 +25,36 @@
 
 }
 
+@layer components {
+    .cascade-list {
+        @apply flex flex-col gap-2;
+
+        div {
+            @apply bg-gray-100 rounded-lg;
+
+            b {
+                @apply block py-3 px-5 bg-blue-company-200 rounded-lg;
+            }
+        }
+
+        div:nth-child(2) {
+            @apply pl-10 lg:pl-20;
+        }
+
+        div:nth-child(3) {
+            @apply pl-15 lg:pl-40;
+        }
+
+        div:nth-child(4) {
+            @apply pl-20 lg:pl-60;
+        }
+
+        div:nth-child(5) {
+            @apply pl-25 lg:pl-80;
+        }
+    }
+}
+
 body {
     @apply bg-black text-white font-poppins;
 }
