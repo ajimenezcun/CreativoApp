@@ -1,0 +1,32 @@
+---
+export interface Props {
+    title: string;
+    href?: string;
+    content: string;
+    icon: string;
+    isExternal?: boolean;
+}
+
+const { title, href, content, icon, isExternal = false } = Astro.props;
+---
+
+<div class="bg-gray-800 p-5 flex-1 rounded-lg text-white">
+    <h5 class="!mt-0 !mb-2 flex items-center gap-2">
+        <Fragment set:html={icon} />
+        {title}
+    </h5>
+    {
+        href ? (
+            <a
+                href={href}
+                class="text-lg"
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+            >
+                {content}
+            </a>
+        ) : (
+            <p class="text-lg">{content}</p>
+        )
+    }
+</div>
