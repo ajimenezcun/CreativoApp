@@ -53,6 +53,34 @@
             @apply pl-25 lg:pl-80;
         }
     }
+
+    .code-block-container {
+        @apply w-full h-[500px] lg:w-2/3;
+        position: relative;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+    }
+
+    /* Máscara para suavizar los bordes del bloque de código */
+    .svg-content {
+        -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
+        mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
+    }
+
+    /* Resplandor ambiental MUY sutil detrás de las letras */
+    .glow-effect {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        /* Reducido de 0.12 a 0.06 para que sea apenas imperceptible, solo luz, no color de fondo */
+        background: radial-gradient(circle, rgba(56, 189, 248, 0.06) 0%, rgba(0, 0, 0, 0) 70%);
+        pointer-events: none;
+        z-index: -1;
+    }
 }
 
 body {

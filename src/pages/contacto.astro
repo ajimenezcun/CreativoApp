@@ -21,7 +21,12 @@ import Layout from "../layouts/Layout.astro";
     lg:gap-10
     lg:flex-row">
             <section class="flex-1 bg-white p-5 rounded-lg">
-                <form action="" autocomplete="off" class="flex flex-col gap-5">
+                <form
+                    action="/api/contact"
+                    id="contact-form"
+                    autocomplete="off"
+                    class="flex flex-col gap-5"
+                >
                     <fieldset>
                         <label for="fullname">Nombre completo</label>
                         <input
@@ -169,4 +174,34 @@ import Layout from "../layouts/Layout.astro";
             </section>
         </div>
     </main>
+
+    <script>
+        // Valida el formulario de contacto
+        const form = document.querySelector("#contact-form");
+        if (form) {
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                // Valida los campos name, email, phone y message
+                const fullname = form.elements["fullname"].value.trim();
+                const email = form.elements["email"].value.trim();
+                const phonenumber = form.elements["phonenumber"].value.trim();
+                const interesting = form.elements["interesting"].value.trim();
+                const message = form.elements["message"].value.trim();
+                if (
+                    !fullname ||
+                    !email ||
+                    !phonenumber ||
+                    !interesting ||
+                    !message
+                ) {
+                    alert("Por favor, complete todos los campos requeridos.");
+                    return;
+                }
+
+                // Si todo está bien, envía el formulario
+                form.submit();
+            });
+        }
+    </script>
 </Layout>
