@@ -3,24 +3,25 @@ import Layout from "../layouts/Layout.astro";
 import ServicesBreadcrumb from "../components/ServicesBreadcrumb.astro";
 import FaqItem from "../components/FaqItem.astro";
 import QuoteSection from "../components/QuoteSection.astro";
+import CodeSVG from "../components/CodeSVG.astro";
 ---
 
 <Layout
     title="Diseño de Páginas Web en Cancún | Sitios Profesionales y a la Medida"
     description="Creamos páginas web profesionales en Cancún optimizadas para SEO, funcionales, seguras y adaptadas a tu negocio. Solicita tu cotización sin compromiso."
 >
-    <section class="section">
-        <h1 class="h-gradient h1 block lg:!mt-30 !mb-1">
+    <section class="section relative">
+        <h1 class="h-gradient h1 block relative z-100 lg:!mt-20 !mb-1">
             Diseño de Páginas Web en Cancún
         </h1>
         <ServicesBreadcrumb current="Diseño de Páginas Web en Cancún" />
 
-        <p class="text-lg mb-5">
+        <p class="text-lg mb-5 relative z-100">
             Una <b class="text-blue-company-500">página web</b> es la puerta de entrada
             digital de tu marca al mundo. En un entorno donde la presencia en línea
             es clave, tener tu propio espacio en la web te brinda un alcance incomparable.
         </p>
-        <p class="text-lg mb-10">
+        <p class="text-lg mb-10 relative z-100">
             La mejor manera de presentar tu identidad, productos y servicios de
             manera cautivadora es a día de hoy a través de una <b
                 class="text-blue-company-500">Página Web</b
@@ -30,10 +31,7 @@ import QuoteSection from "../components/QuoteSection.astro";
             interactuar.
         </p>
 
-        <img
-            src="/src/assets/abstract-lines.svg"
-            class="absolute -z-10 right-0 top-30"
-        />
+        <CodeSVG />
     </section>
     <section
         class="section bg-white rounded-lg text-black flex flex-col lg:flex-row"

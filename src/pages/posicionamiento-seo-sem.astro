@@ -3,25 +3,26 @@ import Layout from "../layouts/Layout.astro";
 import ServicesBreadcrumb from "../components/ServicesBreadcrumb.astro";
 import QuoteSection from "../components/QuoteSection.astro";
 import FaqItem from "../components/FaqItem.astro";
+import CodeSVG from "../components/CodeSVG.astro";
 ---
 
 <Layout
     title="Posicionamiento SEO y SEM en Cancún | Aumenta tu Visibilidad en Google y Redes Sociales"
     description="Potencia tu negocio en internet con estrategias de SEO y campañas SEM que generan tráfico, posicionamiento y resultados medibles. ¡Comienza hoy!"
 >
-    <section class="section">
-        <h1 class="h-gradient h1 block lg:!mt-30">
+    <section class="section relative">
+        <h1 class="h-gradient h1 block relative z-100 lg:!mt-20 !mb-1">
             Posicionamiento SEO & SEM en Cancún
         </h1>
         <ServicesBreadcrumb current="Posicionamiento SEO & SEM en Cancún" />
 
-        <p class="text-lg mb-5">
+        <p class="text-lg mb-5 relative z-100">
             El <b class="text-blue-company-500">posicionamiento SEO</b> es fundamental
             para mejorar la visibilidad de tu sitio web en los motores de búsqueda.
             A través de técnicas de optimización y contenido, ayudamos a que tu página
             escale posiciones en Google y atraiga tráfico orgánico de calidad.
         </p>
-        <p class="text-lg mb-10">
+        <p class="text-lg mb-10 relative z-100">
             Por otro lado, el <b class="text-blue-company-500">SEM</b> (Search Engine
             Marketing) complementa estas estrategias mediante campañas de publicidad
             pagadas que garantizan visibilidad inmediata en los resultados de búsqueda.
@@ -29,10 +30,7 @@ import FaqItem from "../components/FaqItem.astro";
             el retorno de inversión de cada campaña.
         </p>
 
-        <img
-            src="/src/assets/abstract-lines.svg"
-            class="absolute -z-10 right-0 top-30"
-        />
+        <CodeSVG />
     </section>
 
     <section

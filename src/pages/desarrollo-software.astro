@@ -3,33 +3,31 @@ import Layout from "../layouts/Layout.astro";
 import ServicesBreadcrumb from "../components/ServicesBreadcrumb.astro";
 import QuoteSection from "../components/QuoteSection.astro";
 import FaqItem from "../components/FaqItem.astro";
+import CodeSVG from "../components/CodeSVG.astro";
 ---
 
 <Layout
     title="Desarrollo de Software a la Medida en Cancún | Soluciones Personalizadas para tu Empresa"
     description="Creamos software a la medida que se adapta a las necesidades de tu negocio. Automatiza procesos, mejora tu productividad y escala tu operación con tecnología propia."
 >
-    <section class="section">
-        <h1 class="h-gradient h1 block lg:!mt-30 !mb-1">
+    <section class="section relative">
+        <h1 class="h-gradient h1 block relative z-100 lg:!mt-20 !mb-1">
             Desarrollo de Software en Cancún
         </h1>
         <ServicesBreadcrumb current="Desarrollo de Software en Cancún" />
-        <p class="text-lg mb-5">
+        <p class="text-lg mb-5 relative z-100">
             El <b class="text-blue-company-500">software a la medida</b> es una opción
             estratégica para potenciar tu marca. Diseñado específicamente para satisfacer
             las necesidades exclusivas de tu negocio, este enfoque personalizado
             garantiza eficiencia operativa y maximiza la productividad.
         </p>
-        <p class="text-lg mb-10">
+        <p class="text-lg mb-10 relative z-100">
             Al optar por soluciones adaptadas, tu empresa se beneficia de una
             herramienta que se ajusta perfectamente a sus procesos internos,
             ofreciendo un rendimiento optimizado y una experiencia única
         </p>
 
-        <img
-            src="/src/assets/abstract-lines.svg"
-            class="absolute -z-10 right-0 top-30"
-        />
+        <CodeSVG />
     </section>
 
     <section

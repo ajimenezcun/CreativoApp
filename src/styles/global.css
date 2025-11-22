@@ -81,6 +81,18 @@
         pointer-events: none;
         z-index: -1;
     }
+
+    .compnay-button {
+        @apply rounded-md px-5 py-3 bg-blue-company-700 text-white font-semibold transition-all duration-300 relative;
+
+        span {
+            @apply relative z-100;
+        }
+
+        div {
+            @apply absolute w-full h-full top-1 -right-1 bg-white rounded-md -z-10 transition-all duration-300 group-hover:-top-1 group-hover:-right-1;
+        }
+    }
 }
 
 body {
@@ -129,7 +141,7 @@ form {
     }
 
     button {
-        @apply bg-blue-company-600 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 ease-in-out hover:shadow-xl hover:bg-blue-company-800;
+        @apply bg-blue-company-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:bg-blue-company-800;
     }
 }
 
@@ -240,6 +252,6 @@ body.menu-open {
 }
 
 .primary-cta {
-    @apply bg-blue-company-600 text-white font-bold py-2 px-4 rounded-full lg:text-center;
+    @apply bg-blue-company-600 text-white font-bold py-3 px-4 rounded-lg lg:text-center;
     @apply transition-all duration-300 ease-in-out hover:shadow-xl hover:bg-blue-company-800;
 }

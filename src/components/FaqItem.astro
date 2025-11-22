@@ -8,11 +8,16 @@ interface Props {
 const { question, answer, visible = false } = Astro.props;
 ---
 
-<article class="bg-white p-5 rounded-lg mt-10">
+<article
+    class:list={[
+        "p-5 rounded-lg mt-10 border border-gray-700",
+        { "bg-gray-800": visible },
+    ]}
+>
     <div
         class="flex items-center justify-between cursor-pointer faq-item-event"
     >
-        <h3 class="!text-blue-company-500 !m-0">
+        <h3 class="!text-gray-300 !m-0">
             {question}
         </h3>
         <svg
@@ -22,14 +27,14 @@ const { question, answer, visible = false } = Astro.props;
             viewBox="0 0 24 24"
             ><path
                 fill="none"
-                stroke="#1E94FF"
+                stroke="#fff"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.5"
                 d="M18 12h-6m0 0H6m6 0V6m0 6v6"></path></svg
         >
     </div>
-    <p class:list={["text-black", "mt-5", { hidden: !visible }]}>
+    <p class:list={["text-white", "mt-5", { hidden: !visible }]}>
         {answer}
     </p>
 </article>
@@ -45,10 +50,12 @@ const { question, answer, visible = false } = Astro.props;
             faqItems.forEach((el) => {
                 const elAnswer = el.nextElementSibling;
                 elAnswer?.classList.add("hidden");
+                el.parentElement?.classList.remove("bg-gray-800");
             });
 
             // Mostrar la respuesta del item actual
             answer?.classList.toggle("hidden");
+            item.parentElement?.classList.toggle("bg-gray-800");
         });
     });
 </script>

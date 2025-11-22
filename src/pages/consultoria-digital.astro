@@ -3,23 +3,24 @@ import Layout from "../layouts/Layout.astro";
 import ServicesBreadcrumb from "../components/ServicesBreadcrumb.astro";
 import QuoteSection from "../components/QuoteSection.astro";
 import FaqItem from "../components/FaqItem.astro";
+import CodeSVG from "../components/CodeSVG.astro";
 ---
 
 <Layout
     title="Consultoría Digital en Cancún | Estrategias para Crecer Online"
     description="Diagnóstico, planificación y acompañamiento para tu presencia digital. Descubre cómo escalar tu negocio con asesoría estratégica y soluciones digitales personalizadas."
 >
-    <section class="section">
-        <h1 class="h-gradient h1 block lg:!mt-30">
+    <section class="section relative">
+        <h1 class="h-gradient h1 block lg:!mt-20 !mb-1">
             Consultoria Digital en Cancun
         </h1>
         <ServicesBreadcrumb current="Consultoria Digital en Cancún" />
 
-        <p class="text-xl mb-5">
+        <p class="text-xl mb-5 relative z-100">
             Acompañamos a empresas y emprendedores a tomar decisiones digitales
             estratégicas con impacto real.
         </p>
-        <p class="text-lg mb-10">
+        <p class="text-lg mb-10 relative z-100">
             Nuestro servicio de <b class="text-blue-company-500"
                 >consultoría digital en Cancún</b
             > está diseñado para ayudarte a identificar oportunidades, optimizar
@@ -29,10 +30,7 @@ import FaqItem from "../components/FaqItem.astro";
             y efectiva.
         </p>
 
-        <img
-            src="/src/assets/abstract-lines.svg"
-            class="absolute -z-10 right-0 top-30"
-        />
+        <CodeSVG />
     </section>
 
     <section
