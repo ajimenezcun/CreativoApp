@@ -30,13 +30,12 @@ export const POST: APIRoute = async ({ request }) => {
 
     // 3. Procesar el envío 
     const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
-    console.log(RESEND_API_KEY);
 
     const resend = new Resend(RESEND_API_KEY); // Clave secreta
     try {
         await resend.emails.send({
             from: 'onboarding@resend.dev', // Tu dominio verificado
-            to: 'ajimenez@creativoapp.com', // A donde quieres recibir el email
+            to: 'ajimenez.devs@gmail.com', // A donde quieres recibir el email
             subject: `Nuevo mensaje de ${name}`,
             html: `<p>De: ${name} (${email})</p><p>Mensaje: ${message}</p>`,
         });
