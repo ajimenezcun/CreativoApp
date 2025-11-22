@@ -229,7 +229,7 @@ header {
 
 /* Estado abierto del panel */
 #mobileNav.is-open {
-    @apply translate-x-0;
+    @apply translate-x-0 z-200;
 }
 
 /* Overlay para clic fuera */
