@@ -2,12 +2,14 @@ export const initContactFormValidation = () => {
     const form = document.querySelector("#contact-form") as HTMLFormElement;
 
     if (form) {
-        form.addEventListener("submit", (e) => {
+        form.addEventListener("submit", async (e) => {
             e.preventDefault();
             let isValid = true;
 
             // Limpiar errores previos
             document.querySelectorAll(".error-message").forEach((el) => el.remove());
+            const globalError = document.getElementById("global-error");
+            if (globalError) globalError.remove();
 
             // Helper para mostrar errores
             const showError = (input: HTMLElement, message: string) => {
@@ -59,7 +61,50 @@ export const initContactFormValidation = () => {
             }
 
             if (isValid) {
-                form.submit();
+                const submitBtn = form.querySelector("button[type='submit']") as HTMLButtonElement;
+                const originalBtnText = submitBtn.textContent;
+
+                try {
+                    // Estado de carga
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = "Enviando...";
+
+                    const formData = new FormData(form);
+                    const response = await fetch("/api/contact", {
+                        method: "POST",
+                        body: formData,
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        // Éxito: Ocultar form y mostrar mensaje
+                        form.style.display = "none";
+                        const successMessage = document.createElement("div");
+                        successMessage.className = "bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative text-center";
+                        successMessage.innerHTML = `
+                            <strong class="font-bold">¡Mensaje enviado!</strong>
+                            <span class="block sm:inline">Gracias por contactarnos, ${fullname.value}. Te responderemos pronto.</span>
+                        `;
+                        form.parentNode?.insertBefore(successMessage, form);
+                    } else {
+                        // Error del servidor
+                        throw new Error(result.message || "Ocurrió un error al enviar el mensaje.");
+                    }
+                } catch (error: any) {
+                    // Mostrar error global
+                    const errorDiv = document.createElement("div");
+                    errorDiv.id = "global-error";
+                    errorDiv.className = "bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4";
+                    errorDiv.textContent = error.message;
+                    form.insertBefore(errorDiv, form.firstChild);
+                } finally {
+                    // Restaurar botón si hubo error
+                    if (form.style.display !== "none") {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalBtnText;
+                    }
+                }
             }
         });
     }
