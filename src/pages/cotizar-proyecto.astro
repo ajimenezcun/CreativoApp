@@ -20,7 +20,11 @@ import ContactCard from "../components/ContactCard.astro";
     lg:gap-10
     lg:flex-row">
             <section class="flex-1 bg-white p-5 rounded-lg">
-                <form action="" autocomplete="off" class="flex flex-col gap-5">
+                <form
+                    id="quote-form"
+                    autocomplete="off"
+                    class="flex flex-col gap-5"
+                >
                     <fieldset>
                         <label for="fullname">Nombre de Contacto</label>
                         <input
@@ -105,4 +109,8 @@ import ContactCard from "../components/ContactCard.astro";
             </section>
         </div>
     </main>
+    <script>
+        import { initQuoteFormValidation } from "../scripts/quoteValidation";
+        initQuoteFormValidation();
+    </script>
 </Layout>
