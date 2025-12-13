@@ -3,6 +3,7 @@ import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
 import { escapeHtml } from '../../utils/sanitization';
 import { validateContactData, type ContactFormData } from '../../utils/validation';
+import { verifyRecaptcha } from '../../utils/recaptcha';
 
 export const POST: APIRoute = async ({ request }) => {
     const data = await request.formData();
@@ -34,6 +35,16 @@ export const POST: APIRoute = async ({ request }) => {
 
     // 3. Procesar el envío 
     const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
+
+    // Recaptcha logic moved to utils/recaptcha.ts
+    const recaptchaToken = data.get('recaptchaToken')?.toString().trim() || '';
+    const recaptchaResult = await verifyRecaptcha(recaptchaToken);
+    if (!recaptchaResult.success) {
+        return new Response(
+            JSON.stringify({ message: recaptchaResult.message }),
+            { status: 400, headers: { 'Content-Type': 'application/json' } }
+        );
+    }
 
     const resend = new Resend(RESEND_API_KEY);
     try {

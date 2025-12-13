@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const RECAPTCHA_SITE_KEY = "6Ldu4oYoAAAAAGZjM26hQQ2dH-UylAYFNmafVnOp";
 ---
 
 <Layout
@@ -175,7 +177,10 @@ import Layout from "../layouts/Layout.astro";
             </section>
         </div>
     </main>
-    <script>
+    <script
+        src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}
+    ></script>
+    <script define:vars={{ siteKey: RECAPTCHA_SITE_KEY }}>
         import { initContactFormValidation } from "../scripts/contactValidation";
         initContactFormValidation();
     </script>

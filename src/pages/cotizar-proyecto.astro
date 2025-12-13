@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactCard from "../components/ContactCard.astro";
+
+const RECAPTCHA_SITE_KEY = "6Ldu4oYoAAAAAGZjM26hQQ2dH-UylAYFNmafVnOp";
 ---
 
 <Layout
@@ -110,6 +112,7 @@ import ContactCard from "../components/ContactCard.astro";
         </div>
     </main>
     <script>
+        <script src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}></script>
         import { initQuoteFormValidation } from "../scripts/quoteValidation";
         initQuoteFormValidation();
     </script>

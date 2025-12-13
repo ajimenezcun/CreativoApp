@@ -64,12 +64,16 @@ export const initContactFormValidation = () => {
                 const submitBtn = form.querySelector("button[type='submit']") as HTMLButtonElement;
                 const originalBtnText = submitBtn.textContent;
 
+                const token = await grecaptcha.execute(siteKey, { action: 'contact_form' });
+
                 try {
                     // Estado de carga
                     submitBtn.disabled = true;
                     submitBtn.textContent = "Enviando...";
 
                     const formData = new FormData(form);
+                    formData.append('recaptchaToken', token);
+
                     const response = await fetch("/api/contact", {
                         method: "POST",
                         body: formData,
