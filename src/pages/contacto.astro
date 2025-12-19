@@ -182,6 +182,6 @@ const RECAPTCHA_SITE_KEY = "6Ldu4oYoAAAAAGZjM26hQQ2dH-UylAYFNmafVnOp";
     ></script>
     <script define:vars={{ siteKey: RECAPTCHA_SITE_KEY }}>
         import { initContactFormValidation } from "../scripts/contactValidation";
-        initContactFormValidation();
+        initContactFormValidation(siteKey);
     </script>
 </Layout>

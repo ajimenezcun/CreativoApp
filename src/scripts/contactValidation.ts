@@ -1,4 +1,6 @@
-export const initContactFormValidation = () => {
+declare const grecaptcha: any;
+
+export const initContactFormValidation = (siteKey: string) => {
     const form = document.querySelector("#contact-form") as HTMLFormElement;
 
     if (form) {
