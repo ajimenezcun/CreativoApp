@@ -68,6 +68,8 @@ export const initContactFormValidation = (siteKey: string) => {
 
                 const token = await grecaptcha.execute(siteKey, { action: 'contact_form' });
 
+                console.log(siteKey, token);
+
                 try {
                     // Estado de carga
                     submitBtn.disabled = true;
