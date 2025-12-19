@@ -26,6 +26,8 @@ export async function verifyRecaptcha(token: string): Promise<{ success: boolean
 
         const data = await response.json();
 
+        console.info(data);
+
         // Si Google no devuelve éxito o el puntaje es bajo
         if (!data.success || data.score < RECAPTCHA_THRESHOLD) {
             console.warn(`reCAPTCHA falló. Score: ${data.score}, Success: ${data.success}`);
