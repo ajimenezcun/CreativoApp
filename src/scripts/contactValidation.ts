@@ -3,6 +3,8 @@ declare const grecaptcha: any;
 export const initContactFormValidation = (siteKey: string) => {
     const form = document.querySelector("#contact-form") as HTMLFormElement;
 
+    console.log(siteKey, grecaptcha);
+
     if (form) {
         form.addEventListener("submit", async (e) => {
             e.preventDefault();

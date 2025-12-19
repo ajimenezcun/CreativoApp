@@ -1,0 +1,158 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Services from "../components/ServicesSection.astro";
+import Presencia from "../components/Presencia.astro";
+import LogoCarousel from "../components/LogoCarousel.astro";
+import SlideCarrousel from "../components/SlideCarrousel.astro";
+import ButtonsCta from "../components/ButtonsCta.astro";
+import CodeSVG from "../components/CodeSVG.astro";
+
+import items from "../data/projects.json";
+
+const logos = [
+	"/src/assets/pioneros-cancun-marca.webp",
+	"/src/assets/yachtsadventures-logo-light.webp",
+	"/src/assets/caribbean-paradise-vacations-marca.webp",
+	"/src/assets/digrama-marca.webp",
+	"/src/assets/yachting-in-cancun-marca.webp",
+	"/src/assets/fantastic-travel-marca.webp",
+	"/src/assets/tulum-siankaan-tours-marca.webp",
+	"/src/assets/mayikal-experiences-marca.webp",
+];
+---
+
+<Layout
+	title="Agencia de Desarrollo Web en Cancún y Desarrollo de Software a la Medida"
+	description="Creamos soluciones digitales a la medida: Software, CRMs y Aplicaciones Web. Somos tu agencia de desarrollo de software y web en Cancún. ¡Cotiza tu proyecto!"
+>
+	<section class="section relative">
+		<h1 class="block !mb-10 !mt-10 h1 relative z-100 lg:!mt-20 lg:w-3/4">
+			Soluciones de Software y Desarrollo Web a Medida en Cancún
+		</h1>
+		<p class="text-xl mx-auto mb-8 leading-8 relative z-100">
+			En <b class="text-blue-company-500">Creativo APP</b>, transformamos
+			desafíos operativos en ventajas competitivas. Somos la <b
+				class="text-blue-company-500"
+			>
+				Agencia de Desarrollo Web en Cancún</b
+			>
+			y el equipo experto en <b class="text-blue-company-500"
+				>Desarrollo de Software a Medida</b
+			> que tu negocio necesita para escalar. Desde sitios web optimizados
+			hasta plataformas empresariales complejas, diseñamos y codificamos soluciones
+			que trabajan para ti.
+		</p>
+
+		<div class="quote-button head-item">
+			<a href="/contacto" class="compnay-button group">
+				<span>Empieza Ahora</span>
+				<div></div>
+			</a>
+		</div>
+
+		<CodeSVG />
+
+		<Services />
+
+		<div class="mt-20">
+			<h2 class="text-center !mb-0">Casos de Éxito</h2>
+			<h3 class="text-center !text-2xl !mt-0">Nuestros Proyectos</h3>
+			<p class="text-center mx-auto mb-10 w-11/12">
+				Nuestros proyectos hablan por sí mismos. Hemos colaborado en
+				proyectos de diferentes ambientes y sectores, ayudando a
+				empresas de Turismo, Construcción, y Restaurantes brindándoles
+				<b>Desarrollo de Software a Medida</b> y las <b>Páginas Web</b> que
+				necesitaban.
+			</p>
+
+			<LogoCarousel logos={logos} />
+
+			<SlideCarrousel items={items} showIndicators={false} />
+		</div>
+
+		<div class="mt-20 mb-20 p-5 lg:p-10 bg-white rounded-lg">
+			<article class="text-center mb-10 lg:mb-20">
+				<h2 class="!mt-0 !text-blue-company-600">
+					¿Por qué elegir un desarrollo hecho a la medida?
+				</h2>
+				<p class="text-black text-xl mb-10 lg:mb-5">
+					El software genérico no está diseñado para tu modelo de
+					negocio único. Nuestro servicio de <b
+						>Desarrollo de Software a Medida</b
+					> garantiza que cada aplicación, sistema o plataforma se ajuste
+					perfectamente a tus procesos internos, eliminando ineficiencias
+					y potenciando la productividad.
+				</p>
+			</article>
+			<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+				<div class="bg-gray-100 p-5 rounded-lg col-span-1">
+					<Presencia
+						title="Control Total"
+						content="Al desarrollar software a la medida, tienes control total sobre las funcionalidades, el diseño y la escalabilidad del sistema. Esto te permite adaptar y evolucionar la solución según las necesidades cambiantes de tu negocio."
+					>
+						<svg
+							slot="icon"
+							class="text-blue-company-600 w-8 h-8 block mb-3"
+							xmlns="http://www.w3.org/2000/svg"
+							width="64"
+							height="64"
+							viewBox="0 0 24 24"
+						>
+							<path
+								fill="#2196f3"
+								d="M11 8h2v6h-2zm4-7H9v2h6zm-3 19c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7c.7 0 1.36.13 2 .35V13c0-2.12-.74-4.07-1.97-5.61l1.42-1.42c-.45-.51-.9-.97-1.41-1.41L17.62 6c-1.55-1.26-3.5-2-5.62-2a9 9 0 0 0 0 18c.59 0 1.16-.06 1.71-.17c-.31-.58-.53-1.23-.63-1.92c-.36.05-.71.09-1.08.09m11-2.11l-2.89-.25L19 15l-1.13 2.64l-2.87.25l2.18 1.88l-.68 2.81l2.5-1.49l2.45 1.49l-.65-2.81z"
+							></path>
+						</svg>
+					</Presencia>
+				</div>
+				<div class="bg-gray-100 p-5 rounded-lg col-span-1">
+					<Presencia
+						title="Escalabilidad"
+						content="Nuestras soluciones están diseñadas para crecer contigo. Ofrecemos sistemas y sitios web escalables que pueden expandirse y adaptarse fácilmente a medida que tu negocio evoluciona."
+					>
+						<svg
+							slot="icon"
+							class="text-blue-company-600 w-8 h-8 block mb-3"
+							xmlns="http://www.w3.org/2000/svg"
+							width="64"
+							height="64"
+							viewBox="0 0 24 24"
+						>
+							<path
+								fill="#2196f3"
+								d="M1 12V7h1.5v2.45l2.975-2.975l1.05 1.05L3.55 10.5H6V12zm6.525-5.475l-1.05-1.05L9.45 2.5H7V1h5v5h-1.5V3.55zM14.825 23q-.6 0-1.15-.225t-.975-.65L7.6 17l.75-.775q.4-.4.938-.537t1.062.012l1.65.475V8q0-.425.288-.712T13 7t.713.288T14 8v10.825l-2.425-.675l2.55 2.55q.125.125.313.213t.387.087H19q.825 0 1.413-.587T21 19v-4q0-.425.288-.712T22 14t.713.288T23 15v4q0 1.65-1.175 2.825T19 23zM15 16v-4q0-.425.288-.712T16 11t.713.288T17 12v4zm3 0v-3q0-.425.288-.712T19 12t.713.288T20 13v3zm-.5 2"
+							></path>
+						</svg>
+					</Presencia>
+				</div>
+				<div class="bg-gray-100 p-5 rounded-lg col-span-1">
+					<Presencia
+						title="Soporte Continuo"
+						content="Nuestra relación no termina con la entrega del proyecto. Ofrecemos soporte y mantenimiento continuo para asegurarnos de que todo funcione perfectamente y para realizar mejoras cuando sea necesario."
+					>
+						<svg
+							slot="icon"
+							class="text-blue-company-600 w-8 h-8 block mb-3"
+							xmlns="http://www.w3.org/2000/svg"
+							width="64"
+							height="64"
+							viewBox="0 0 16 16"
+						>
+							<path
+								fill="none"
+								stroke="#2196f3"
+								stroke-linejoin="round"
+								d="M14.5 12.5h-2v-4h2zm0 0c.667-3.667.3-11-6.5-11s-7.167 7.333-6.5 11m0 0h2v-4h-2zm7 2c1.31.11 3.476-.268 4.816-2m-4.816 2v-1h-1v1z"
+							></path>
+						</svg>
+					</Presencia>
+				</div>
+			</div>
+		</div>
+
+		<ButtonsCta
+			title="¿Estás listo para llevar tu negocio al siguiente nivel?"
+		/>
+	</section>
+</Layout>;
+

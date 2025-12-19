@@ -1,0 +1,98 @@
+import { e as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_krUznCXv.mjs';
+import { $ as $$Layout } from '../chunks/Layout_C768Dq_N.mjs';
+import { $ as $$ServicesBreadcrumb, a as $$QuoteSection, b as $$FaqItem } from '../chunks/FaqItem_CCzuVloN.mjs';
+import { $ as $$CodeSVG } from '../chunks/CodeSVG_CjiiQ09Z.mjs';
+export { renderers } from '../renderers.mjs';
+
+const $$PosicionamientoSeoSem = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Posicionamiento SEO y SEM en Canc\xFAn | Aumenta tu Visibilidad en Google y Redes Sociales", "description": "Potencia tu negocio en internet con estrategias de SEO y campa\xF1as SEM que generan tr\xE1fico, posicionamiento y resultados medibles. \xA1Comienza hoy!" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="section relative"> <h1 class="h-gradient h1 block relative z-100 lg:!mt-20 !mb-1">
+Posicionamiento SEO & SEM en Cancún
+</h1> ${renderComponent($$result2, "ServicesBreadcrumb", $$ServicesBreadcrumb, { "current": "Posicionamiento SEO & SEM en Canc\xFAn" })} <p class="text-lg mb-5 relative z-100">
+El <b class="text-blue-company-500">posicionamiento SEO</b> es fundamental
+            para mejorar la visibilidad de tu sitio web en los motores de búsqueda.
+            A través de técnicas de optimización y contenido, ayudamos a que tu página
+            escale posiciones en Google y atraiga tráfico orgánico de calidad.
+</p> <p class="text-lg mb-10 relative z-100">
+Por otro lado, el <b class="text-blue-company-500">SEM</b> (Search Engine
+            Marketing) complementa estas estrategias mediante campañas de publicidad
+            pagadas que garantizan visibilidad inmediata en los resultados de búsqueda.
+            Con un enfoque en la segmentación y el análisis de datos, maximizamos
+            el retorno de inversión de cada campaña.
+</p> ${renderComponent($$result2, "CodeSVG", $$CodeSVG, {})} </section> <section class="section bg-white rounded-lg text-black flex flex-col lg:flex-row"> <div class="p-3 lg:p-10 lg:w-2/4"> <h2 class="!text-blue-company-600 !mt-0">
+¿Qué es el Posicionamiento SEO y SEM?
+</h2> <p class="mb-5">
+El <b class="text-blue-company-500">Posicionamiento SEO</b> es el
+                proceso de optimización de un sitio web para mejorar su visibilidad
+                en los resultados orgánicos de los motores de búsqueda.
+</p> <p>
+Por otro lado, el <b class="text-blue-company-500">SEM</b> <small>(Search Engine Marketing)</small> implica el uso de publicidad
+                pagada para aumentar la visibilidad en los motores de búsqueda.
+</p> </div> <div class="relative p-3 lg:p-5 lg:w-2/4"> <img src="/src/assets/banner-seo-publicidad.webp" class="w-full h-full object-cover rounded-lg" alt=""> </div> </section> <section class="section lg:!mt-20"> <h2 class="text-center">¿Qué incluye nuestro servicio de SEO y SEM?</h2> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10"> <article class="border-2 border-gray-800 p-5 rounded-lg"> <h3 class="!mt-0">Auditoría SEO</h3> <p>
+Realizamos un análisis exhaustivo de tu sitio web para
+                    identificar áreas de mejora y oportunidades de optimización.
+</p> </article> <article class="border-2 border-gray-800 p-5 rounded-lg"> <h3 class="!mt-0">Estrategia de Palabras Clave</h3> <p>
+Definimos las palabras clave más relevantes para tu negocio
+                    y creamos un plan de contenido que las incluya de manera
+                    natural y efectiva.
+</p> </article> <article class="border-2 border-gray-800 p-5 rounded-lg"> <h3 class="!mt-0">Optimización On-Page</h3> <p>
+Mejoramos la estructura y el contenido de tu sitio web para
+                    facilitar la indexación por parte de los motores de
+                    búsqueda.
+</p> </article> <article class="border-2 border-gray-800 p-5 rounded-lg"> <h3 class="!m-0">SEO Local</h3> <small class="text-lg uppercase font-semibold text-blue-company-500 block mb-4">(Google Maps y reseñas)</small> <p>
+Implementamos estrategias para mejorar tu visibilidad en
+                    búsquedas locales, incluyendo la optimización de tu perfil
+                    en Google My Business y la gestión de reseñas.
+</p> </article> <article class="border-2 border-gray-800 p-5 rounded-lg"> <h3 class="!mt-0">Campañas en Google Ads</h3> <p>
+Diseñamos y gestionamos campañas de publicidad pagada en
+                    Google Ads para atraer tráfico cualificado a tu sitio web y
+                    aumentar tus conversiones.
+</p> </article> <article class="border-2 border-gray-800 p-5 rounded-lg"> <h3 class="!m-0">Reportes y Análisis mensual</h3> <small class="text-lg uppercase font-semibold text-blue-company-500 block mb-4">(Seguimiento de objetivos)</small> <p>
+Proporcionamos informes detallados sobre el rendimiento de
+                    tus campañas y el tráfico orgánico, permitiéndote tomar
+                    decisiones informadas para mejorar continuamente tu
+                    estrategia.
+</p> </article> </div> </section> <section class="section !mt-10 lg:!mt-20 flex flex-col lg:flex-row"> <article class="flex-1 p-5 bg-gray-900 rounded-t-lg lg:rounded-tl-lg lg:rounded-bl-lg"> <h3 class="!mt-0">Beneficios al Posicionar tu Página Web</h3> <p class="mb-5">
+Al implementar estrategias de SEO y SEM, tu negocio puede
+                experimentar una serie de beneficios significativos:
+</p> <ul class="flex flex-col gap-5 mt-10"> <li class="flex items-center gap-2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#155DFC" d="M4 19v1h18v2H2V2h2v15c3 0 6-2 8.1-5.6c3-5 6.3-7.4 9.9-7.4v2c-2.8 0-5.5 2.1-8.1 6.5C11.3 16.6 7.7 19 4 19"></path></svg>
+Aumenta tu tráfico web calificado.
+</li> <li class="flex items-center gap-2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="#155DFC" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="#155DFC"><path d="M12 17c-1.674 0-3.13 1.265-3.882 3.131c-.36.892.156 1.869.84 1.869h6.083c.685 0 1.2-.977.841-1.869C15.13 18.265 13.674 17 12 17m6.5-12h1.202c1.201 0 1.801 0 2.115.377c.313.378.183.944-.078 2.077l-.39 1.7C20.76 11.708 18.61 13.608 16 14M5.5 5H4.298c-1.201 0-1.802 0-2.115.377c-.313.378-.183.944.078 2.077l.39 1.7C3.24 11.708 5.39 13.608 8 14"></path><path d="M12 17c3.02 0 5.565-4.662 6.33-11.01c.211-1.754.317-2.632-.243-3.311S16.622 2 14.813 2H9.187c-1.81 0-2.714 0-3.274.679S5.46 4.236 5.67 5.991C6.435 12.338 8.98 17 12 17"></path></g></svg>
+Mejora la autoridad de tu marca, producto o servicio.
+</li> <li class="flex items-center gap-2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="none" stroke="#155DFC" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M403.29 32H280.36a14.46 14.46 0 0 0-10.2 4.2L24.4 281.9a28.85 28.85 0 0 0 0 40.7l117 117a28.86 28.86 0 0 0 40.71 0L427.8 194a14.46 14.46 0 0 0 4.2-10.2v-123A28.66 28.66 0 0 0 403.29 32"></path><path fill="#155DFC" d="M352 144a32 32 0 1 1 32-32a32 32 0 0 1-32 32"></path><path fill="none" stroke="#155DFC" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="m230 480l262-262a13.8 13.8 0 0 0 4-10V80"></path></svg>
+Reduces el costo por adquisición a largo plazo.
+</li> <li class="flex items-center gap-2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#155DFC" d="M15 3H9V1h6zm-4 11h2V8h-2zm8-1c.7 0 1.36.13 2 .35V13c0-2.12-.74-4.07-1.97-5.61l1.42-1.42c-.45-.51-.9-.97-1.41-1.41L17.62 6c-1.55-1.26-3.5-2-5.62-2a9 9 0 0 0 0 18c.59 0 1.16-.06 1.71-.17c-.31-.58-.53-1.23-.63-1.92c-.36.05-.71.09-1.08.09c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7m-2 3v6l5-3z"></path></svg>
+Generas resultados 24/7 sin pagar por clic.
+</li> <li class="flex items-center gap-2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="#155DFC" stroke-width="1.5"><path d="M8.5 12V6h7V2.5L22 9l-6.5 6.5V12z"></path><path d="M15.5 18v-6h-7V8.5L2 15l6.5 6.5V18z"></path></g></svg>
+Mayor retorno de inversión (ROI).
+</li> </ul> </article> <article class="flex-1 p-5 bg-gray-800 rounded-b-lg lg:rounded-tr-lg lg:rounded-br-lg"> <h3 class="!mt-0">Así trabajamos con tu Posicionamiento</h3> <p>
+Nuestro proceso de posicionamiento SEO y SEM se basa en una
+                metodología ágil que nos permite adaptarnos rápidamente a los
+                cambios del mercado y las necesidades de nuestros clientes.
+</p> <div> <h4 class="!text-xl"> <span class="text-blue-company-500">1.</span> Diagnóstico de
+                    visibilidad actual
+</h4> </div> <div> <h4 class="!text-xl"> <span class="text-blue-company-500">2.</span> Análisis de competencia
+                    y palabras clave
+</h4> </div> <div> <h4 class="!text-xl"> <span class="text-blue-company-500">3.</span> Optimización técnica
+                    y de contenido
+</h4> </div> <div> <h4 class="!text-xl"> <span class="text-blue-company-500">4.</span> Diseño de campañas
+                    en Google Ads
+</h4> </div> <div> <h4 class="!text-xl"> <span class="text-blue-company-500">5.</span> Monitoreo y ajustes
+                    continuos
+</h4> </div> </article> </section> <section class="section !mt-5 lg:!mt-20"> ${renderComponent($$result2, "QuoteSection", $$QuoteSection, { "section": "Posicionamiento SEO & SEM en Canc\xFAn" })} <h2 class="!mt-20 lg:!mt-30">
+Preguntas frecuentes sobre Posicionamiento SEO & SEM
+</h2> ${renderComponent($$result2, "FaqItem", $$FaqItem, { "question": "\xBFCu\xE1nto tiempo tarda el SEO en dar resultados?", "answer": "El tiempo que tarda el SEO en dar resultados puede variar dependiendo de multiples factores, como la competencia en el mercado, la calidad del contenido y las estrategias implementadas. En general, se pueden empezar a ver resultados en un plazo de 3 a 6 meses.", "visible": true })} ${renderComponent($$result2, "FaqItem", $$FaqItem, { "question": "\xBFCu\xE1l es el presupuesto ideal para campa\xF1as SEM?", "answer": "El presupuesto ideal para campa\xF1as SEM puede va a variar seg\xFAn los objetivos de la campa\xF1a, la competencia en el mercado y el p\xFAblico objetivo. Sin embargo, es recomendable destinar al menos un 10-20% de los ingresos esperados de la campa\xF1a para obtener resultados significativos.", "visible": false })} ${renderComponent($$result2, "FaqItem", $$FaqItem, { "question": "\xBFPuedo combinar ambos servicios?", "answer": "S\xED, combinar SEO y SEM es una estrategia efectiva para maximizar la visibilidad de tu negocio en l\xEDnea. Mientras el SEO trabaja en mejorar el posicionamiento org\xE1nico a largo plazo, el SEM puede generar tr\xE1fico inmediato a trav\xE9s de campa\xF1as pagadas.", "visible": false })} ${renderComponent($$result2, "FaqItem", $$FaqItem, { "question": "\xBFNecesito tener p\xE1gina web para trabajar el SEO?", "answer": "S\xED, para implementar estrategias de SEO es necesario contar con una p\xE1gina web. Si no tienes una, podemos ayudarte a crearla y optimizarla para los motores de b\xFAsqueda.", "visible": false })} ${renderComponent($$result2, "FaqItem", $$FaqItem, { "question": "\xBFQu\xE9 herramientas usan para el an\xE1lisis?", "answer": "Utilizamos una combinaci\xF3n de herramientas de an\xE1lisis SEO y SEM, como Google Analytics, SEMrush y Ahrefs, para obtener informaci\xF3n valiosa sobre el rendimiento de tu sitio web y las campa\xF1as publicitarias. Estas herramientas nos permiten identificar oportunidades de mejora y ajustar nuestras estrategias en consecuencia.", "visible": false })} </section> ` })}`;
+}, "C:/JSApps/creativoapp.com/CreativoApp/src/pages/posicionamiento-seo-sem.astro", void 0);
+
+const $$file = "C:/JSApps/creativoapp.com/CreativoApp/src/pages/posicionamiento-seo-sem.astro";
+const $$url = "/posicionamiento-seo-sem";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+    __proto__: null,
+    default: $$PosicionamientoSeoSem,
+    file: $$file,
+    url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
