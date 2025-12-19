@@ -68,8 +68,9 @@ export const initContactFormValidation = (siteKey: string) => {
 
                 const token = await grecaptcha.execute(siteKey, { action: 'contact_form' });
 
-                console.log(token, siteKey);
-                return false;
+                // console.log(token, siteKey);
+                showError(submitBtn, "Error al validar el reCAPTCHA con token: " + token);
+                return;
 
                 try {
                     // Estado de carga
