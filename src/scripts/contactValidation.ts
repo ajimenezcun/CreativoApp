@@ -69,6 +69,7 @@ export const initContactFormValidation = (siteKey: string) => {
                 const token = await grecaptcha.execute(siteKey, { action: 'contact_form' });
 
                 console.log(token, siteKey);
+                return false;
 
                 try {
                     // Estado de carga
