@@ -21,7 +21,7 @@ export async function verifyRecaptcha(token: string): Promise<{ success: boolean
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: params.toString(),
+            body: `secret=${RECAPTCHA_SECRET_KEY}&response=${token}`,
         });
 
         const data = await response.json();
