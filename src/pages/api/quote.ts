@@ -14,6 +14,7 @@ export const POST: APIRoute = async ({ request }) => {
         phonenumber: data.get('phonenumber')?.toString().trim() || '',
         company: data.get('company')?.toString().trim() || '',
         message: data.get('message')?.toString().trim() || '',
+        interesting: '',
     };
 
     // 1. Validaciones
