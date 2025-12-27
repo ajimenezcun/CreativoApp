@@ -1,4 +1,5 @@
-export const initQuoteFormValidation = () => {
+declare const grecaptcha: any;
+export const initQuoteFormValidation = (siteKey: string) => {
     const form = document.querySelector("#quote-form") as HTMLFormElement;
 
     if (form) {
@@ -64,12 +65,16 @@ export const initQuoteFormValidation = () => {
                 const submitBtn = form.querySelector("button[type='submit']") as HTMLButtonElement;
                 const originalBtnText = submitBtn.textContent;
 
+                const token = await grecaptcha.execute(siteKey, { action: 'contact_form' });
+
                 try {
                     // Estado de carga
                     submitBtn.disabled = true;
                     submitBtn.textContent = "Enviando...";
 
                     const formData = new FormData(form);
+                    formData.append('recaptchaToken', token);
+
                     const response = await fetch("/api/quote", {
                         method: "POST",
                         body: formData,
