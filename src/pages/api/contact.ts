@@ -39,8 +39,6 @@ export const POST: APIRoute = async ({ request }) => {
     // Recaptcha logic moved to utils/recaptcha.ts
     const recaptchaToken = data.get('recaptchaToken')?.toString().trim() || '';
 
-    console.warn(recaptchaToken);
-
     const recaptchaResult = await verifyRecaptcha(recaptchaToken);
     if (!recaptchaResult.success) {
         return new Response(
@@ -73,7 +71,7 @@ export const POST: APIRoute = async ({ request }) => {
     // 4. Respuesta de éxito
     return new Response(
         JSON.stringify({
-            message: 'Mensaje enviado correctamente!',
+            message: 'Cotización enviada correctamente!',
         }),
         {
             status: 200,

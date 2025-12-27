@@ -183,15 +183,8 @@ const RECAPTCHA_SITE_KEY = "6Ldu4oYoAAAAAGZjM26hQQ2dH-UylAYFNmafVnOp";
 
     <script>
         import { initContactFormValidation } from "../scripts/contactValidation";
-
-        // Buscamos el formulario
         const form = document.getElementById("contact-form");
-
-        // Obtenemos la llave desde una constante o una variable inyectada
-        // Nota: Como es una llave pública, podemos ponerla aquí directo
-        // o leerla de un atributo del formulario.
         const siteKey = "6Ldu4oYoAAAAAGZjM26hQQ2dH-UylAYFNmafVnOp";
-
         if (form) {
             initContactFormValidation(siteKey);
         }

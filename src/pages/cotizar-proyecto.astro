@@ -111,8 +111,16 @@ const RECAPTCHA_SITE_KEY = "6Ldu4oYoAAAAAGZjM26hQQ2dH-UylAYFNmafVnOp";
             </section>
         </div>
     </main>
+    <script
+        src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}
+    ></script>
+
     <script>
         import { initQuoteFormValidation } from "../scripts/quoteValidation";
-        initQuoteFormValidation();
+        const form = document.getElementById("quote-form");
+        const siteKey = "6Ldu4oYoAAAAAGZjM26hQQ2dH-UylAYFNmafVnOp";
+        if (form) {
+            initQuoteFormValidation(siteKey);
+        }
     </script>
 </Layout>
