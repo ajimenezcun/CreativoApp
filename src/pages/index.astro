@@ -38,8 +38,8 @@ const logos = [
 			>
 			y el equipo experto en <b class="text-blue-company-500"
 				>Desarrollo de Software a Medida</b
-			> que tu negocio necesita para escalar. Desde sitios web optimizados
-			hasta plataformas empresariales complejas, diseñamos y codificamos soluciones
+			> que tu negocio necesita para escalar. Desde sitios web optimizados hasta
+			plataformas empresariales complejas, diseñamos y codificamos soluciones
 			que trabajan para ti.
 		</p>
 
@@ -154,5 +154,53 @@ const logos = [
 			title="¿Estás listo para llevar tu negocio al siguiente nivel?"
 		/>
 	</section>
+
+	<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@type": "ProfessionalService",
+			"@id": "https://www.creativoapp.com/#business",
+			"name": "Creativo APP",
+			"url": "https://www.creativoapp.com/",
+			"description": "Agencia de desarrollo web y software a la medida en Cancún. Diseñamos sitios web, CRMs, aplicaciones web y estrategias SEO/SEM para empresas.",
+			"telephone": "+52 998 223 5933",
+			"email": "hola@creativoapp.com",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Cancún",
+				"addressRegion": "Quintana Roo",
+				"addressCountry": "MX"
+			},
+			"areaServed": [
+				{ "@type": "City", "name": "Cancún" },
+				{ "@type": "AdministrativeArea", "name": "Quintana Roo" },
+				{ "@type": "Country", "name": "México" }
+			],
+			"image": "/src/assets/creativo-app-company.png",
+			"logo": "/src/assets/creativo-app-company.png",
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Servicios",
+				"itemListElement": [
+					{
+						"@type": "OfferCatalog",
+						"name": "Diseño y Desarrollo Web"
+					},
+					{
+						"@type": "OfferCatalog",
+						"name": "Desarrollo de Software a la Medida"
+					},
+					{
+						"@type": "OfferCatalog",
+						"name": "Posicionamiento SEO & SEM"
+					},
+					{
+						"@type": "OfferCatalog",
+						"name": "Consultoría Digital"
+					}
+				]
+			}
+		}
+	</script>
 </Layout>;
 
