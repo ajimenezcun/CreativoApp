@@ -18,8 +18,8 @@ import CodeSVG from "../components/CodeSVG.astro";
         <p class="text-lg mb-5 relative z-100">
             El <b class="text-blue-company-500">software a la medida</b> es una opción
             estratégica para potenciar tu marca. Diseñado específicamente para satisfacer
-            las necesidades exclusivas de tu negocio, este enfoque personalizado
-            garantiza eficiencia operativa y maximiza la productividad.
+            las necesidades exclusivas de tu negocio, este enfoque personalizado garantiza
+            eficiencia operativa y maximiza la productividad.
         </p>
         <p class="text-lg mb-10 relative z-100">
             Al optar por soluciones adaptadas, tu empresa se beneficia de una
@@ -231,8 +231,8 @@ import CodeSVG from "../components/CodeSVG.astro";
             </div>
             <div>
                 <h4 class="!text-xl">
-                    <span class="text-blue-company-500">4.</span> Desarrollo con
-                    metodología ágil
+                    <span class="text-blue-company-500">4.</span> Desarrollo con metodología
+                    ágil
                 </h4>
             </div>
             <div>
@@ -279,4 +279,112 @@ import CodeSVG from "../components/CodeSVG.astro";
             visible={false}
         />
     </section>
+
+    <script type="application/ld+json" is:inline>
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://www.creativoapp.com/desarrollo-software#service",
+            "name": "Desarrollo de Software a la medida en Cancún",
+            "serviceType": "Desarrollo de Software",
+            "description": "Creamos software a la medida que se adapta a las necesidades de tu negocio. Automatiza procesos, mejora tu productividad y escala tu operación con tecnología propia.",
+            "provider": {
+                "@type": "ProfessionalService",
+                "@id": "https://www.creativoapp.com/#business"
+            },
+            "areaServed": [
+                { "@type": "City", "name": "Cancún" },
+                { "@type": "AdministrativeArea", "name": "Quintana Roo" },
+                { "@type": "Country", "name": "México" }
+            ],
+            "audience": {
+                "@type": "Audience",
+                "audienceType": "Empresas y emprendedores"
+            },
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "MXN",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.creativoapp.com/desarrollo-software"
+            }
+        }
+    </script>
+
+    <script type="application/ld+json" is:inline>
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://www.creativoapp.com/desarrollo-software#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "¿Cuánto cuesta desarrollar un software a la medida?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "El costo de desarrollar un software a la medida puede variar dependiendo de diversos factores, como la complejidad del proyecto, las funcionalidades requeridas, la infraestructura necesaria y el tiempo de desarrollo. Te invitamos a contactarnos para obtener una cotización personalizada."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Cuánto tarda el proceso de un Software a la medida?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "El tiempo de desarrollo de un software a la medida depende de la complejidad del proyecto, las funcionalidades requeridas y la metodología utilizada. En general, el proceso puede llevar desde unas semanas hasta varios meses. Trabajamos contigo para establecer un cronograma realista y cumplir tus expectativas."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Podré añadir nuevas funcionalidades después?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Sí, uno de los beneficios del desarrollo a medida es que puedes añadir o modificar funcionalidades en cualquier momento. Trabajamos contigo en el servicio continuo para implementar cambios y mejoras en el tiempo según sea necesario."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Ustedes se encargan del Soporte y/o mantenimiento?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Sí, ofrecemos servicios de soporte y mantenimiento para garantizar que tu software funcione correctamente y se mantenga actualizado. Sin embargo, al ser un desarrollo personalizado serás siempre el propietario del mismo y podrás decidir sobre su uso y mantenimiento."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Por qué no elegir una solución comercial?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "En muchas ocasiones, las soluciones comerciales no se adaptan del todo a nuestros flujos y/o procesos. Habrá soluciones que cuenten con características menos o de más, y es ahí donde el software a medida se convierte en la mejor opción."
+                    }
+                }
+            ]
+        }
+    </script>
+
+    <script type="application/ld+json" is:inline>
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.creativoapp.com/paginas-web-cancun#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Inicio",
+                    "item": "https://www.creativoapp.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Servicios",
+                    "item": "https://www.creativoapp.com/servicios"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Desarrollo de Software",
+                    "item": "https://www.creativoapp.com/desarrollo-software"
+                }
+            ]
+        }
+    </script>
 </Layout>

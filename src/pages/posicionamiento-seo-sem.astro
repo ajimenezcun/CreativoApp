@@ -236,8 +236,8 @@ import CodeSVG from "../components/CodeSVG.astro";
             </p>
             <div>
                 <h4 class="!text-xl">
-                    <span class="text-blue-company-500">1.</span> Diagnóstico de
-                    visibilidad actual
+                    <span class="text-blue-company-500">1.</span> Diagnóstico de visibilidad
+                    actual
                 </h4>
             </div>
             <div>
@@ -302,4 +302,112 @@ import CodeSVG from "../components/CodeSVG.astro";
             visible={false}
         />
     </section>
+
+    <script type="application/ld+json" is:inline>
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://www.creativoapp.com/posicionamiento-seo-sem#service",
+            "name": "Posicionamiento SEO & SEM",
+            "serviceType": "Posicionamiento SEO & SEM",
+            "description": "Potencia tu negocio en internet con estrategias de SEO y campañas SEM que generan tráfico, posicionamiento y resultados medibles. ¡Comienza hoy!",
+            "provider": {
+                "@type": "ProfessionalService",
+                "@id": "https://www.creativoapp.com/#business"
+            },
+            "areaServed": [
+                { "@type": "City", "name": "Cancún" },
+                { "@type": "AdministrativeArea", "name": "Quintana Roo" },
+                { "@type": "Country", "name": "México" }
+            ],
+            "audience": {
+                "@type": "Audience",
+                "audienceType": "Empresas y emprendedores"
+            },
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "MXN",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.creativoapp.com/posicionamiento-seo-sem"
+            }
+        }
+    </script>
+
+    <script type="application/ld+json" is:inline>
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://www.creativoapp.com/posicionamiento-seo-sem#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "¿Cuánto tiempo tarda el SEO en dar resultados?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "El tiempo que tarda el SEO en dar resultados puede variar dependiendo de multiples factores, como la competencia en el mercado, la calidad del contenido y las estrategias implementadas. En general, se pueden empezar a ver resultados en un plazo de 3 a 6 meses."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Cuál es el presupuesto ideal para campañas SEM?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "El presupuesto ideal para campañas SEM puede a variar según los objetivos de la campaña, la competencia en el mercado y el público objetivo. Sin embargo, es recomendable destinar al menos un 10-20% de los ingresos esperados de la campaña para obtener resultados significativos."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Puedo combinar ambos servicios?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Sí, combinar SEO y SEM es una estrategia efectiva para maximizar la visibilidad de tu negocio en línea. Mientras el SEO trabaja en mejorar el posicionamiento orgánico a largo plazo, el SEM puede generar tráfico inmediato a través de campañas pagadas."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Necesito tener página web para trabajar el SEO?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Sí, para implementar estrategias de SEO es necesario contar con una página web. Si no tienes una, podemos ayudarte a crearla y optimizarla para los motores de búsqueda."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Qué herramientas usan para el análisis?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Utilizamos una combinación de herramientas de análisis SEO y SEM, como Google Analytics, SEMrush y Ahrefs, para obtener información valiosa sobre el rendimiento de tu sitio web y las campañas publicitarias. Estas herramientas nos permiten identificar oportunidades de mejora y ajustar nuestras estrategias en consecuencia."
+                    }
+                }
+            ]
+        }
+    </script>
+
+    <script type="application/ld+json" is:inline>
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.creativoapp.com/paginas-web-cancun#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Inicio",
+                    "item": "https://www.creativoapp.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Servicios",
+                    "item": "https://www.creativoapp.com/servicios"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Posicionamiento SEO & SEM",
+                    "item": "https://www.creativoapp.com/posicionamiento-seo-sem"
+                }
+            ]
+        }
+    </script>
 </Layout>
