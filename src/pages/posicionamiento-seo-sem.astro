@@ -311,10 +311,7 @@ import CodeSVG from "../components/CodeSVG.astro";
             "name": "Posicionamiento SEO & SEM",
             "serviceType": "Posicionamiento SEO & SEM",
             "description": "Potencia tu negocio en internet con estrategias de SEO y campañas SEM que generan tráfico, posicionamiento y resultados medibles. ¡Comienza hoy!",
-            "provider": {
-                "@type": "ProfessionalService",
-                "@id": "https://www.creativoapp.com/#business"
-            },
+            "provider": { "@id": "https://www.creativoapp.com/#business" },
             "areaServed": [
                 { "@type": "City", "name": "Cancún" },
                 { "@type": "AdministrativeArea", "name": "Quintana Roo" },
@@ -326,9 +323,57 @@ import CodeSVG from "../components/CodeSVG.astro";
             },
             "offers": {
                 "@type": "Offer",
+                "url": "https://www.creativoapp.com/posicionamiento-seo-sem",
                 "priceCurrency": "MXN",
-                "availability": "https://schema.org/InStock",
-                "url": "https://www.creativoapp.com/posicionamiento-seo-sem"
+                "availability": "https://schema.org/InStock"
+            }
+        }
+    </script>
+
+    <script type="application/ld+json" is:inline>
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "@id": "https://www.creativoapp.com/#business",
+            "name": "Creativo APP",
+            "url": "https://www.creativoapp.com/",
+            "description": "Agencia de desarrollo web y software a la medida en Cancún. Diseñamos sitios web, CRMs, aplicaciones web y estrategias SEO/SEM para empresas.",
+            "telephone": "+52 998 223 5933",
+            "email": "hola@creativoapp.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Cancún",
+                "addressRegion": "Quintana Roo",
+                "addressCountry": "MX"
+            },
+            "areaServed": [
+                { "@type": "City", "name": "Cancún" },
+                { "@type": "AdministrativeArea", "name": "Quintana Roo" },
+                { "@type": "Country", "name": "México" }
+            ],
+            "image": "https://www.creativoapp.com/src/assets/creativo-app-company.png",
+            "logo": "https://www.creativoapp.com/src/assets/creativo-app-company.png",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Servicios",
+                "itemListElement": [
+                    {
+                        "@type": "OfferCatalog",
+                        "name": "Diseño y Desarrollo Web"
+                    },
+                    {
+                        "@type": "OfferCatalog",
+                        "name": "Desarrollo de Software a la Medida"
+                    },
+                    {
+                        "@type": "OfferCatalog",
+                        "name": "Posicionamiento SEO & SEM"
+                    },
+                    {
+                        "@type": "OfferCatalog",
+                        "name": "Consultoría Digital"
+                    }
+                ]
             }
         }
     </script>
