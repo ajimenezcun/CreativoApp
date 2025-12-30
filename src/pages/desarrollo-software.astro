@@ -4,6 +4,7 @@ import ServicesBreadcrumb from "../components/ServicesBreadcrumb.astro";
 import QuoteSection from "../components/QuoteSection.astro";
 import FaqItem from "../components/FaqItem.astro";
 import CodeSVG from "../components/CodeSVG.astro";
+import ProfesionalService from "../components/schema/ProfesionalService.astro";
 ---
 
 <Layout
@@ -307,53 +308,7 @@ import CodeSVG from "../components/CodeSVG.astro";
         }
     </script>
 
-    <script type="application/ld+json" is:inline>
-        {
-            "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            "@id": "https://www.creativoapp.com/#business",
-            "name": "Creativo APP",
-            "url": "https://www.creativoapp.com/",
-            "description": "Agencia de desarrollo web y software a la medida en Cancún. Diseñamos sitios web, CRMs, aplicaciones web y estrategias SEO/SEM para empresas.",
-            "telephone": "+52 998 223 5933",
-            "email": "hola@creativoapp.com",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Cancún",
-                "addressRegion": "Quintana Roo",
-                "addressCountry": "MX"
-            },
-            "areaServed": [
-                { "@type": "City", "name": "Cancún" },
-                { "@type": "AdministrativeArea", "name": "Quintana Roo" },
-                { "@type": "Country", "name": "México" }
-            ],
-            "image": "https://www.creativoapp.com/src/assets/creativo-app-company.png",
-            "logo": "https://www.creativoapp.com/src/assets/creativo-app-company.png",
-            "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Servicios",
-                "itemListElement": [
-                    {
-                        "@type": "OfferCatalog",
-                        "name": "Diseño y Desarrollo Web"
-                    },
-                    {
-                        "@type": "OfferCatalog",
-                        "name": "Desarrollo de Software a la Medida"
-                    },
-                    {
-                        "@type": "OfferCatalog",
-                        "name": "Posicionamiento SEO & SEM"
-                    },
-                    {
-                        "@type": "OfferCatalog",
-                        "name": "Consultoría Digital"
-                    }
-                ]
-            }
-        }
-    </script>
+    <ProfesionalService />
 
     <script type="application/ld+json" is:inline>
         {
