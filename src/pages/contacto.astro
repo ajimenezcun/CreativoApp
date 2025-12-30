@@ -189,4 +189,61 @@ const RECAPTCHA_SITE_KEY = "6Ldu4oYoAAAAAGZjM26hQQ2dH-UylAYFNmafVnOp";
             initContactFormValidation(siteKey);
         }
     </script>
+
+    <script type="application/ld+json" is:inline>
+        {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "@id": "https://www.creativoapp.com/contacto#contactpage",
+            "url": "https://www.creativoapp.com/contacto",
+            "name": "Contacto | Creativo APP",
+            "description": "Contáctanos para cotizar tu proyecto de desarrollo web, software a la medida, SEO/SEM o consultoría digital en Cancún.",
+            "inLanguage": "es-MX",
+            "isPartOf": {
+                "@type": "WebSite",
+                "@id": "https://www.creativoapp.com/#website",
+                "url": "https://www.creativoapp.com/",
+                "name": "Creativo APP"
+            },
+            "about": {
+                "@type": "ProfessionalService",
+                "@id": "https://www.creativoapp.com/#business",
+                "name": "Creativo APP"
+            },
+            "mainEntity": {
+                "@type": "ProfessionalService",
+                "@id": "https://www.creativoapp.com/#business"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "/src/assets/creativo-app-company.png"
+            },
+            "publisher": {
+                "@type": "ProfessionalService",
+                "@id": "https://www.creativoapp.com/#business"
+            }
+        }
+    </script>
+
+    <script type="application/ld+json" is:inline>
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "@id": "https://www.creativoapp.com/contacto#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Inicio",
+                    "item": "https://www.creativoapp.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Contacto",
+                    "item": "https://www.creativoapp.com/contacto"
+                }
+            ]
+        }
+    </script>
 </Layout>
