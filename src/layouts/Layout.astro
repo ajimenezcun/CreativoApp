@@ -9,6 +9,11 @@ const {
 	description = "Agencia especializada en SEO y diseño web",
 } = Astro.props;
 
+const canonicalUrl = new URL(
+	Astro.url.pathname,
+	"https://creativoapp.com",
+).toString();
+
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 
@@ -35,6 +40,7 @@ import "../styles/global.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalUrl} />
 
 		<link rel="dns-prefetch" href="https://www.google-analytics.com" />
 		<link rel="preconnect" href="https://www.google-analytics.com" />
